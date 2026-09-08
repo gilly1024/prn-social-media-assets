@@ -57,6 +57,15 @@ AI analysis lab, ops room.
 `2026-09-08_PRN_SHORT_ADVERT_ENDCARD_WIREFRAME.svg`
 Referenced by [`../../VIDEO_STYLE_GUIDE.md`](../../VIDEO_STYLE_GUIDE.md).
 
+## source/2026-09-growth-sprint/ — campaign source images
+
+Source images retained separately from the publish-ready derivatives for the September 2026
+growth sprint. Their canonical URLs, attribution, rights notes and campaign use are recorded in
+[`../../campaigns/2026-09-growth-sprint.json`](../../campaigns/2026-09-growth-sprint.json) and
+[`../../campaigns/2026-09-growth-sprint-part2.json`](../../campaigns/2026-09-growth-sprint-part2.json).
+PRN-hosted generated or atmospheric artwork remains illustrative and must never be presented as
+field evidence or as a verified photograph.
+
 ---
 
 ## Deliberately NOT migrated — and why
