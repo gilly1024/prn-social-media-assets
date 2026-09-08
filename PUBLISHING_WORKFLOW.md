@@ -67,14 +67,20 @@ fetchable URL — it will not accept raw bytes. **Confirm Postiz reports the med
 on its own domain before continuing.** Never create a publishing job against an asset Postiz
 has not confirmed it holds.
 
-### 4. Duplicate check — mandatory
+### 4. Caption rule check — mandatory
+Before scheduling or publishing Facebook or TikTok content, confirm the caption contains exactly
+one standalone `Link in bio.` CTA and exactly one `#FYP` hashtag unless Greg explicitly overrode
+the rule for that post. Check case-insensitively to prevent duplicates. Facebook must retain its
+exact clickable PRN destination URL as well; the bio CTA does not replace it.
+
+### 5. Duplicate check — mandatory
 Immediately before publication, list existing posts and confirm this content has not already
 been posted or scheduled. Include **scheduled** posts in the check, not only published ones.
 
-### 5. Publish only on Greg's explicit instruction
+### 6. Publish only on Greg's explicit instruction
 Confirm the exact destination platforms with Greg. Then publish.
 
-### 6. Verify the outcome
+### 7. Verify the outcome
 Confirm the publication result per platform and record the post ID and public URL.
 
 ## Failure handling

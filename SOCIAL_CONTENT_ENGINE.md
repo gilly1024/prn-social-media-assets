@@ -182,6 +182,19 @@ Main domain: `https://www.paranormalresponsenetwork.org`
 
 For platforms where the caption link is not directly clickable, make the route clear with suitable "link in bio" wording. Every destination link must be checked/resolved before it is shown to Greg — an unverified or dead destination is a documented failure mode (§19).
 
+### 6.1 Mandatory Facebook and TikTok caption elements
+
+Unless Greg explicitly overrides the rule for a named post, every Facebook and TikTok caption
+must include:
+
+- `Link in bio.` as a standalone CTA line or paragraph; and
+- `#FYP` in the hashtag block.
+
+Both elements must appear exactly once. Perform a case-insensitive duplication check before adding
+either one. On Facebook, preserve the exact clickable PRN destination URL as well: the bio CTA is
+additional and must never replace the direct link. Instagram and other platforms retain their own
+platform-specific CTA and hashtag rules.
+
 ---
 
 ## 7. PLATFORM SUITABILITY AND ROUTING

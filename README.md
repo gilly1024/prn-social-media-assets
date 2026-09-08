@@ -49,6 +49,19 @@ repository.
   destination state first.
 - **No secrets, tokens, API keys or passwords belong in this repository.** It is public.
 
+### Mandatory Facebook and TikTok caption rule
+
+Unless Greg explicitly overrides it for a particular post, every new Facebook and TikTok caption
+must contain both of these elements:
+
+- The standalone CTA `Link in bio.`
+- The hashtag `#FYP`
+
+Each must appear **exactly once**. Check case-insensitively before adding them so neither is
+duplicated. Facebook captions must also retain the exact clickable PRN destination URL; `Link in
+bio.` is an additional CTA, not a replacement for that URL. This rule does not automatically apply
+to Instagram, YouTube, Bluesky or LinkedIn.
+
 ---
 
 ## Media handoff — how an agent publishes an asset

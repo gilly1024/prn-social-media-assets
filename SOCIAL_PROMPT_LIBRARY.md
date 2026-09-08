@@ -473,6 +473,10 @@ Use British English.
 Do not imply a team.
 Do not use a hashtag salad.
 Do not repeat all text already visible on the image.
+For Facebook and TikTok, include the standalone CTA "Link in bio." and the hashtag #FYP exactly
+once unless Greg explicitly overrides either element for this post. Check case-insensitively to
+avoid duplicates. On Facebook, preserve the exact clickable PRN destination URL as well; "Link in
+bio." is additional and does not replace the direct link.
 
 Return only:
 - final caption;
