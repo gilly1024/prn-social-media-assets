@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920">
+  <!-- REFERENCE ONLY — NOT A PUBLISHABLE ASSET. Replace the logo placeholder with the genuine PRN master logo. -->
+  <defs>
+    <radialGradient id="blueGlow" cx="0.28" cy="0.31" r="0.5">
+      <stop offset="0" stop-color="#2A78BC" stop-opacity="0.42"/>
+      <stop offset="1" stop-color="#2A78BC" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="coralGlow" cx="0.72" cy="0.31" r="0.5">
+      <stop offset="0" stop-color="#BB5633" stop-opacity="0.38"/>
+      <stop offset="1" stop-color="#BB5633" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1080" height="1920" fill="#010308"/>
+  <rect width="1080" height="1920" fill="url(#blueGlow)"/>
+  <rect width="1080" height="1920" fill="url(#coralGlow)"/>
+
+  <!-- Safe-zone guide; reference only -->
+  <rect x="105" y="120" width="870" height="1580" rx="28" fill="none" stroke="#7E848A" stroke-opacity="0.22" stroke-width="2" stroke-dasharray="14 14"/>
+
+  <!-- Official logo placeholder. No coloured rectangle around logo. -->
+  <circle cx="540" cy="570" r="210" fill="#010308" stroke="#545C64" stroke-width="4"/>
+  <path d="M330 570 C390 450 430 420 485 395" fill="none" stroke="#2A78BC" stroke-width="18" stroke-linecap="round" opacity="0.65"/>
+  <path d="M750 570 C690 450 650 420 595 395" fill="none" stroke="#BB5633" stroke-width="18" stroke-linecap="round" opacity="0.65"/>
+  <text x="540" y="550" text-anchor="middle" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700">INSERT GENUINE</text>
+  <text x="540" y="600" text-anchor="middle" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700">PRN MASTER LOGO</text>
+
+  <!-- Subject / section title -->
+  <text x="540" y="975" text-anchor="middle" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="38" letter-spacing="7">EXPLORE THE FULL</text>
+  <text x="540" y="1090" text-anchor="middle" fill="#BB5633" font-family="Arial, Helvetica, sans-serif" font-size="82" font-weight="800">SUBJECT / SECTION</text>
+
+  <!-- Website -->
+  <text x="540" y="1265" text-anchor="middle" fill="#2A78BC" font-family="Arial, Helvetica, sans-serif" font-size="45" font-weight="800">PARANORMALRESPONSENETWORK.ORG</text>
+  <text x="540" y="1355" text-anchor="middle" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="34">/exact-page-path</text>
+
+  <line x1="220" y1="1470" x2="860" y2="1470" stroke="#545C64" stroke-width="2"/>
+  <text x="540" y="1545" text-anchor="middle" fill="#7E848A" font-family="Arial, Helvetica, sans-serif" font-size="26">Hold long enough to read. Keep .ORG and route fully visible.</text>
+
+  <text x="540" y="1810" text-anchor="middle" fill="#7E848A" font-family="Arial, Helvetica, sans-serif" font-size="20">REFERENCE ONLY — 1080×1920 — DO NOT PUBLISH THIS WIREFRAME</text>
+</svg>
