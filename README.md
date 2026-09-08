@@ -19,6 +19,7 @@ repository.
 | [`BRAND_VOICE.md`](BRAND_VOICE.md) | PRN social brand voice and tone |
 | [`SOCIAL_CONTENT_ENGINE.md`](SOCIAL_CONTENT_ENGINE.md) | How PRN social content is selected, structured and created |
 | [`VIDEO_STYLE_GUIDE.md`](VIDEO_STYLE_GUIDE.md) | Video production style and standards |
+| [`VIDEO_EXPORT_AND_PLAYBACK_LOCK.md`](VIDEO_EXPORT_AND_PLAYBACK_LOCK.md) | Mandatory in-chat MP4 compatibility, playback QA, audio and animated-closeout rules |
 | [`SOCIAL_PROMPT_LIBRARY.md`](SOCIAL_PROMPT_LIBRARY.md) | Reusable prompts, templates and build instructions |
 | [`PUBLISHING_WORKFLOW.md`](PUBLISHING_WORKFLOW.md) | Approval, GitHub asset upload, Postiz ingestion, duplicate checking and publishing |
 
@@ -37,6 +38,8 @@ repository.
 - **Creating content is not permission to publish it.**
 - **Generating media is not permission to publish it.**
 - **Uploading media to this repository is not permission to publish it.**
+- For every PRN social-video task, agents must read and obey
+  [`VIDEO_EXPORT_AND_PLAYBACK_LOCK.md`](VIDEO_EXPORT_AND_PLAYBACK_LOCK.md) before delivery.
 - Agents **upload approved assets automatically**. Greg is **not** the media-transfer layer —
   he must never be asked to download, drag, re-upload or hand-carry files between services.
 - Public GitHub **raw URLs** are the ingestion mechanism for Postiz.
