@@ -6,6 +6,10 @@ This repository is the **single canonical authority** for all Paranormal Respons
 social-media operations, brand voice and approved media assets. It is also the **permanent asset
 handoff location** used by AI agents (ChatGPT, Claude) and Postiz.
 
+It also contains the canonical pointer and format-lock instructions for Greg's approved PRN report
+families. The exact venue-specific master-reference PDFs themselves remain in the connected private
+Google Drive rather than this public repository.
+
 Historical social-media or brand-voice material found anywhere else — including in
 `gilly1024/prn-brain` — is **NOT authoritative** unless it is explicitly referenced from this
 repository.
@@ -22,6 +26,7 @@ repository.
 | [`VIDEO_EXPORT_AND_PLAYBACK_LOCK.md`](VIDEO_EXPORT_AND_PLAYBACK_LOCK.md) | Mandatory in-chat MP4 compatibility, playback QA, audio and animated-closeout rules |
 | [`SOCIAL_PROMPT_LIBRARY.md`](SOCIAL_PROMPT_LIBRARY.md) | Reusable prompts, templates and build instructions |
 | [`PUBLISHING_WORKFLOW.md`](PUBLISHING_WORKFLOW.md) | Approval, GitHub asset upload, Postiz ingestion, duplicate checking and publishing |
+| [`REPORTS/00_READ_FIRST_REPORT_FORMATS.md`](REPORTS/00_READ_FIRST_REPORT_FORMATS.md) | Owner-approved historical-background and post-investigation report format locks; exact master PDFs are in private Drive |
 
 ## Asset locations
 
@@ -29,6 +34,7 @@ repository.
 | --- | --- |
 | [`assets/images/`](assets/images/) | Approved and reusable image assets |
 | [`assets/videos/`](assets/videos/) | Approved and reusable video assets |
+| [`REPORTS/`](REPORTS/) | Instructions and source-of-truth pointers for approved PRN report formats; no venue-specific master PDFs are stored publicly here |
 
 ---
 
