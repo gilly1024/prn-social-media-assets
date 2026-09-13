@@ -10,6 +10,33 @@ Agents creating a PRN historical/location-background report or a post-investigat
 
 The venue-specific master PDFs are intentionally not copied into this public repository.
 
+## Mission / Investigation Briefing Pack
+
+Canonical visual and layout reference:
+
+`PRN_Christchurch_Mansion_Investigation_Briefing_Edition_9_Final.pdf`
+
+This is the owner-approved standard for PRN mission briefing / investigation briefing packs. Agents must locate and visually inspect this exact file before creating or materially revising a briefing pack.
+
+Locked direction:
+- A4 portrait with a deep navy / near-black background on every operational page.
+- Use the exact official PRN circular logo; never redraw, regenerate, recolour, squash or substitute it.
+- Cover uses the PRN dark tactical/cinematic visual system: large white venue title, blue outlined briefing-pack strap, white supporting copy, dark metadata panel, blue and orange accents, and strong visual depth.
+- Running header uses the small PRN logo, muted blue-grey text and a restrained blue rule.
+- Major section banners are dark-to-blue/navy rounded panels with an orange left accent, small spaced section number and large white title.
+- Subheads are bold white with a narrow bright-blue vertical accent.
+- Tables use dark navy cells, blue header rows, white/light-grey text and subtle blue grid lines.
+- Bullets use orange markers with white/light-grey text.
+- Callouts use dark navy rounded panels with blue, orange or mint/green left bars according to meaning.
+- Figures, maps, floor plans and photographs sit inside dark framed panels with muted italic captions. White source images may remain white inside the dark frame.
+- Footer uses a thin blue rule and muted blue-grey PRN / venue / date text.
+- The pack must look like the Christchurch Mansion Edition 9 family. A mostly white business-document layout is not an acceptable substitute.
+- Content structure may vary by venue, but evidence-key discipline, visual hierarchy and operational readability must remain consistent.
+- Witness reports, verified history, folklore, environmental controls, operational access and instrumented findings must remain clearly separated.
+- Use cautious evidence language. `Unresolved` is not a paranormal label.
+
+For a new venue, copy the visual system and information architecture, not Christchurch-specific content. Replace venue/date/history/layout/witness information while preserving the approved briefing-pack design family.
+
 ## Historical / Location Background Report
 
 Canonical Drive file:
@@ -64,11 +91,11 @@ The approved Christchurch Mansion reference uses report identity/metadata, execu
 
 ## Mandatory workflow
 
-1. Retrieve the exact approved master from Drive before designing.
+1. Retrieve and visually inspect the exact approved reference before designing.
 2. Retrieve current official PRN banner/logo assets rather than recreating them.
-3. Build a new derivative for the venue; never edit or overwrite the master in place.
+3. Build a new derivative for the venue; never edit or overwrite an approved master in place.
 4. Render every page and visually inspect the complete PDF before presenting it to Greg.
-5. Check specifically for banner distortion/cropping, wrong logo/rings, clipping, poor spacing, oversized headers, box-heavy layouts and graph/data changes.
-6. Treat material departure from the approved master as a defect unless Greg explicitly requested a redesign.
+5. Check specifically for wrong branding, banner/logo distortion, white/off-brand page treatment, clipping, poor spacing, oversized headers, box-heavy layouts where inappropriate, and altered evidence.
+6. Treat material departure from the approved reference as a defect unless Greg explicitly requested a redesign.
 
-These references exist so Greg does not have to repeatedly redesign or re-approve the same report formats with each new agent.
+These references exist so Greg does not have to repeatedly redesign or re-approve the same PRN document formats with each new agent.
