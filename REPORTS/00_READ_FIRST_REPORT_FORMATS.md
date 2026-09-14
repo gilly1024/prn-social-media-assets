@@ -16,36 +16,32 @@ Canonical visual and layout reference:
 
 `PRN_Christchurch_Mansion_Investigation_Briefing_Edition_9_Final.pdf`
 
-Verified same-family fallback/reference where needed:
+This is the owner-approved standard for PRN mission briefing / investigation briefing packs. It is a format lock. Agents must locate and visually inspect this exact PDF before creating or materially revising a briefing pack.
 
-`Christchurch_Mansion_Investigation_Briefing_Working_Edition_5.pdf`
-
-This is the owner-approved standard for PRN mission briefing / investigation briefing packs. Agents must visually inspect the Christchurch briefing reference before creating or materially revising a briefing pack.
-
-### Mission briefing format lock
+### Mission briefing format lock — Christchurch Edition 9 family
 
 - A4 portrait.
-- **Interior operational pages are white / very light, not dark navy pages.** Do not import the dark historical-report or post-investigation-report page treatment into a mission briefing.
-- Use the exact official PRN circular logo. Never redraw, regenerate, recolour, squash, stretch or substitute it.
-- Cover: large approved dark PRN hero/banner image across the upper page; below it, large blue serif `PARANORMAL INVESTIGATION BRIEFING PACK` title, orange working-edition line, small official PRN logo, and a compact metadata table using navy, pale blue/white and pale orange cells.
-- Cover field-purpose callout: pale blue box with a bright-blue left rule and blue heading.
-- Running header on interior pages: small official PRN logo at left; centred two-line `PARANORMAL RESPONSE NETWORK | FIELD INVESTIGATION BRIEFING` treatment using navy and orange; venue/date aligned at right; thin bright-blue horizontal rule below.
-- Major numbered section heading: full-width dark navy rectangular bar with large white serif uppercase title, bright-blue left rule and thin orange rule along the bottom.
-- Subsection heading: large dark-navy serif text on white, narrow bright-blue vertical bar at left and a thin grey/blue rule beneath. Do not turn every subsection into a dark section banner.
-- Body copy: dark charcoal/navy serif text on white.
-- Tables: dark navy header row with white text; white and very pale blue/grey alternating body rows; fine blue-grey grid lines.
-- Standard information callout: pale blue fill, bright-blue left rule, blue heading, dark text.
-- Warning/correction/confidentiality callout: pale peach/orange fill, orange left rule, orange heading, dark text.
-- Bullets are normal dark body bullets on white; do not use orange bullet-list styling as a substitute for the Christchurch pack.
-- Figures, maps, floor plans and photographs sit naturally on white pages with restrained framing where useful and muted italic captions beneath.
-- Footer: thin grey/blue rule; muted blue-grey `PRN CONTROLLED WORKING DOCUMENT | RESEARCH EDITION | EVIDENCE-LED / NON-INVASIVE` text; bold page number at right.
-- The overall result must visibly read as the Christchurch Mansion briefing-pack family: formal research/field document, white operational pages, navy structure, blue controls and orange emphasis. A dark dashboard/card document is not an acceptable substitute.
+- The complete pack uses a continuous deep navy / near-black visual field. Interior operational pages are dark, not white business-document pages.
+- Use the exact official PRN circular logo on the dark PRN background. Never redraw, regenerate, recolour, squash, stretch, crop into a square tile, place it on a white patch, or substitute another logo.
+- Cover: dark cinematic PRN treatment, slim blue/orange left-edge accents, official circular logo and PRN identity at the top, large white venue title, blue-outlined `PARANORMAL INVESTIGATION BRIEFING PACK` strap, light supporting copy, and a dark metadata panel with blue labels and an orange left accent.
+- Interior running header: small official PRN circular logo, muted blue-grey `Paranormal Response Network — [venue] Briefing` wording, and a restrained thin blue rule.
+- Major numbered section heading: broad dark/navy panel integrated into the page, orange left accent, small spaced `SECTION 01` label and large white title. Do not place every subsection in another box.
+- Subsection heading: large white text directly on the navy page with a narrow bright-blue vertical rule at the left. Let prose flow below it like an edited magazine/research dossier.
+- Body copy: light grey/white text directly on the deep navy page. Do not put ordinary paragraphs into pale cards or white boxes.
+- Bullets: small orange markers with light body text, as in Edition 9.
+- Tables: dark navy body cells with blue header rows, white/light-grey text and restrained blue-grey rules. Use tables only when the information genuinely benefits from tabular structure.
+- Callouts: restrained dark-on-dark panels with a blue, green or orange left rule according to purpose. Use sparingly. Do not turn every paragraph, witness account or note into a separate card.
+- Figures, maps, floor plans and photographs sit inside restrained dark framed areas with muted italic captions. A white source image or map may remain white inside the dark frame; the surrounding page stays navy.
+- Equipment cards, where required, follow the Edition 9 blue/navy equipment treatment. That card treatment is for equipment/specification material and must not be copied across ordinary narrative pages.
+- Footer: thin blue rule and muted blue-grey `Paranormal Response Network | [venue] Investigation | [date]` text.
+- The overall result must read like a professionally edited field-research book/magazine: one coherent dark visual system, strong hierarchy, generous breathing space and flowing editorial composition. It must not look like a dashboard assembled from lots of small boxes.
+- A white/light business-document layout, pale callout system, floating logo-on-white treatment, or generic corporate report is a defect.
 - Content structure may vary by venue, but evidence-key discipline, information hierarchy, source reconciliation and operational readability must remain consistent.
 - Witness reports, verified history, folklore, environmental controls, operational access and instrumented findings must remain clearly separated.
-- Confidentiality permissions from witness questionnaires must be enforced in the briefing itself and in any derivative/public version.
+- Confidentiality permissions from witness questionnaires must be enforced in the briefing itself and in every derivative/public version.
 - Use cautious evidence language. `Unresolved` is not a paranormal label.
 
-For a new venue, copy the visual system and information architecture, not Christchurch-specific content. Replace venue/date/history/layout/witness information while preserving the approved briefing-pack design family.
+For a new venue, copy the visual system and information architecture of Christchurch Edition 9, not Christchurch-specific content. Replace venue/date/history/layout/witness information while preserving the approved briefing-pack design family.
 
 ## Historical / Location Background Report
 
