@@ -140,6 +140,63 @@
     transform: none !important;
   }
 }
+</style><style data-source="christchurch-date-choice.css">
+/*
+ * PRN Christchurch Mansion 2027 date choice — competition + tickets.
+ * Real 30/31 October selection is an information-only UI until legal, inventory,
+ * ticketing and competition backends have independent approval.
+ */
+.cc-date-choice { margin:26px 0 23px; padding:22px; border:1px solid rgba(222,174,135,.5); border-radius:18px; background:radial-gradient(ellipse at 88% 0%,rgba(197,122,71,.15),transparent 58%),linear-gradient(155deg,rgba(20,31,43,.97),rgba(9,14,22,.97)); box-shadow:inset 0 2px rgba(255,241,223,.13),0 4px 0 #302825,0 20px 40px #0009; }
+.cc-date-choice h2 { color:#fff; font-size:clamp(20px,2vw,26px); line-height:1.23; letter-spacing:-.045em; margin:7px 0 17px; font-weight:850; }
+.cc-date-kicker { margin:0; font-size:10px; color:#eac1a6; letter-spacing:.17em; text-transform:uppercase; font-weight:850; }
+.cc-date-options { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
+.cc-date-option { appearance:none; display:flex; flex-direction:column; align-items:stretch; text-align:left; min-width:0; padding:14px 16px 13px; background:linear-gradient(155deg,rgba(34,46,61,.94),rgba(10,17,26,.97)); border:1px solid rgba(171,197,220,.5); border-radius:12px; color:#f0f4f7; box-shadow:inset 0 1px #ffffff26,0 4px 0 #172a3b,0 12px 22px #0008; cursor:pointer; transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease; }
+.cc-date-option:hover { transform:translateY(-2px); border-color:#c1ddf1; }
+.cc-date-option[data-selected="true"] { border:2px solid #f0c4a1; padding:13px 15px 12px; background:radial-gradient(circle at 90% 5%,rgba(239,166,104,.22),transparent 46%),linear-gradient(155deg,#344050,#131e2c); box-shadow:inset 0 2px rgba(255,255,255,.18),0 4px 0 #8c5540,0 0 0 2px rgba(225,166,121,.19),0 15px 35px rgba(203,134,88,.18); }
+.cc-date-option-top { display:flex; align-items:center; justify-content:space-between; gap:8px; font-size:11px; letter-spacing:.14em; color:#d6e7f3; font-weight:850; }
+.cc-date-option[data-date="2027-10-31"] .cc-date-option-top { color:#ffd0ad; }
+.cc-date-radio { width:18px; height:18px; border-radius:50%; border:2px solid #adc9de; display:block; flex:none; }
+.cc-date-option[data-selected="true"] .cc-date-radio { border:5px solid #f4c7a1; background:#152130; }
+.cc-date-option-main { display:flex; align-items:baseline; gap:12px; margin:9px 0 11px; }
+.cc-date-option-main strong { font:700 clamp(60px,6.5vw,80px)/.94 Georgia,serif; color:#fff4e5; letter-spacing:-.09em; }
+.cc-date-option-main span { color:#f5e8dc; font-size:13px; line-height:1.25; letter-spacing:.1em; font-weight:850; }
+.cc-date-option-price { display:block; font-size:23px; font-weight:850; letter-spacing:-.055em; line-height:1.25; color:#fff; }
+.cc-date-option-price small { display:block; font-size:10px; letter-spacing:0; font-weight:600; color:#b8c8d6; margin-top:4px; }
+.cc-date-option-action { display:block; margin-top:13px; padding-top:11px; border-top:1px solid #ffffff25; text-align:center; font-size:12px; font-weight:850; letter-spacing:.01em; color:#bad8ee; }
+.cc-date-option[data-selected="true"] .cc-date-option-action { color:#ffdfbc; }
+.cc-date-selection { font-size:13px; line-height:1.65; color:#e5eff6; margin:21px 0 9px; min-height:21px; }
+.cc-date-selection strong { color:#f8c69f; }
+.cc-date-safety { font-size:11px; line-height:1.65; margin:0; color:#b5c3cf; }
+.cin-night-card { appearance:none; cursor:pointer; text-align:left; font:inherit; width:100%; }
+.cin-night-card[data-selected="true"] { border:2px solid #d5e9fa; box-shadow:inset 0 2px #ffffff56,0 6px 0 #3b668c,0 30px 62px #000b,0 0 0 3px #84bce336; }
+.cin-night-card[data-date="2027-10-31"][data-selected="true"] { border-color:#f5c398; box-shadow:inset 0 2px #ffdfc659,0 6px 0 #85533f,0 30px 62px #000b,0 0 0 3px #de9a6e40; }
+.cin-night-card:focus-visible { outline:3px solid #c0e4ff; outline-offset:5px; }
+.cin-night-card-content { width:100%; display:flex; flex-direction:column; align-items:stretch; }
+.cin-night-card-title { font-size:clamp(24px,2.7vw,34px); font-weight:800; line-height:1.18; letter-spacing:-.045em; color:#fff; margin:23px 0 10px; }
+.cin-night-select-cta { display:block; width:100%; margin-top:16px; padding:12px 18px; text-align:center; font-size:13px; font-weight:850; border-radius:10px; border:1px solid #b6d5f171; color:#d0e9fb; background:linear-gradient(145deg,#294b69b9,#153148c9); box-shadow:inset 0 2px #ffffff18,0 4px 0 #122c40; }
+.cin-night-card[data-selected="true"] .cin-night-select-cta { background:linear-gradient(130deg,#d7aa84,#975f47); border-color:#ffddba; color:#140c0c; box-shadow:inset 0 2px #ffffff5e,0 4px 0 #55372c; }
+.cin-selected-night { max-width:900px; margin:34px auto 0; padding:23px 27px; background:radial-gradient(ellipse at 88% 0%,#a2674840,transparent 52%),linear-gradient(130deg,#182d40,#0a141f); border:1px solid #accfe778; border-radius:15px; box-shadow:0 5px 0 #172b3c,0 19px 35px #000a; color:#eaf2f8; }
+.cin-selected-night span { display:block; text-transform:uppercase; letter-spacing:.17em; font-size:10px; font-weight:850; color:#b9d8ec; margin-bottom:8px; }
+.cin-selected-night strong { display:block; font-size:clamp(18px,2.3vw,26px); font-weight:850; line-height:1.3; color:#fff; }
+.cin-selected-night p { color:#bfccd8; font-size:12px; line-height:1.7; margin:8px 0 0; }
+@media(max-width:640px) {
+ .cc-date-choice {padding:16px 13px; margin-top:20px;}
+ .cc-date-options {gap:8px;}
+ .cc-date-option {padding:11px 10px;}
+ .cc-date-option[data-selected="true"] {padding:10px 9px;}
+ .cc-date-option-top {font-size:10px;letter-spacing:.08em;}
+ .cc-date-option-main {gap:8px;}
+ .cc-date-option-main strong {font-size:clamp(51px,12vw,67px);}
+ .cc-date-option-main span {font-size:11px;}
+ .cc-date-option-price {font-size:19px;}
+ .cc-date-option-price small {font-size:9px;}
+ .cc-date-option-action {font-size:11px;}
+ .cin-night-card-title {font-size:27px;}
+ .cin-selected-night {margin-top:25px;padding:19px 17px;}
+}
+@media(max-width:340px) { .cc-date-option-main strong{font-size:46px}.cc-date-option-main span{font-size:10px}.cc-date-option-price{font-size:17px} }
+@media(prefers-reduced-motion:reduce) { .cc-date-option { transition:none!important; transform:none!important; } }
+
 </style></head><body>
 <header class="nav"><div class="nav-brand"><a href="index.html"><img src="https://www.paranormalresponsenetwork.org/brand/PRN_logo_MASTER.png" alt="Official Paranormal Response Network logo"></a><span><b>PARANORMAL RESPONSE NETWORK</b><small>CHRISTCHURCH MANSION · 2027</small></span></div><nav class="nav-actions" aria-label="Preview navigation"><a href="competition.html">Win a free place</a><a class="join" href="competition.html">Competition preview ↗</a></nav></header>
 <main>
@@ -153,10 +210,10 @@
           <header class="cin-night-intro">
             <p class="prn-pub-eyebrow">Christchurch Mansion · October 2027</p>
             <h2 id="cin-night-heading">Two nights.<br/><em>One extraordinary setting.</em></h2>
-            <p>When the doors close to the daytime crowds, the mansion tells a different story. Explore our planned investigation nights and choose the evening that suits you.</p>
+            <p>When the doors close to the daytime crowds, the mansion tells a different story. Choose your night below. The two cards display confirmed paid admission prices; booking remains closed until PRN announces ticket sales.</p>
           </header>
-          <div class="cin-night-grid">
-            <article class="cin-night-card cin-night-card--saturday" aria-labelledby="cin-night-30-title">
+          <div class="cin-night-grid" role="group" aria-label="Select a Christchurch Mansion night">
+            <article class="cin-night-card cin-night-card--saturday" aria-labelledby="cin-night-30-title" data-date="2027-10-30" data-selected="false">
               
               <img class="cin-night-photo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Cmglee_Ipswich_Christchurch_Mansion_stairs_library.jpg/960px-Cmglee_Ipswich_Christchurch_Mansion_stairs_library.jpg" alt="" aria-hidden="true" loading="lazy"/>
               <span class="cin-night-photo-credit">Authentic mansion interior</span>
@@ -168,10 +225,10 @@
                 <div class="cin-night-details">
                   <span class="cin-night-detail">Strictly 18+</span><span class="cin-night-detail">Timings to be confirmed</span>
                 </div>
-                <div class="cin-night-price"><strong>Price to be confirmed</strong><span>Tickets coming soon</span></div>
+                <div class="cin-night-price"><strong>£69.99 per guest</strong><span>Tickets coming soon</span></div><button type="button" class="cin-night-select-cta" data-ticket-night="2027-10-30" aria-pressed="false" aria-label="Select Saturday 30 October at £69.99">Select this night</button>
               </div>
             </article>
-            <article class="cin-night-card cin-night-card--halloween" aria-labelledby="cin-night-31-title">
+            <article class="cin-night-card cin-night-card--halloween" aria-labelledby="cin-night-31-title" data-date="2027-10-31" data-selected="false">
               
               <img class="cin-night-photo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Cmglee_Ipswich_Christchurch_Mansion_Great_Hall.jpg/960px-Cmglee_Ipswich_Christchurch_Mansion_Great_Hall.jpg" alt="" aria-hidden="true" loading="lazy"/>
               <span class="cin-night-photo-credit">Authentic Great Hall</span>
@@ -183,19 +240,19 @@
                 <div class="cin-night-details">
                   <span class="cin-night-detail">7pm–2am</span><span class="cin-night-detail">Strictly 18+</span><span class="cin-night-detail">50 guests planned</span>
                 </div>
-                <div class="cin-night-price"><strong>£79.00 per guest</strong><span>Tickets coming soon</span></div>
+                <div class="cin-night-price"><strong>£79.00 per guest</strong><span>Tickets coming soon</span></div><button type="button" class="cin-night-select-cta" data-ticket-night="2027-10-31" aria-pressed="false" aria-label="Select Sunday 31 October at £79.00">Select this night</button>
               </div>
             </article>
           </div>
-          <p class="cin-night-footnote">Both dates are planned and remain subject to final venue arrangements. No reservations or payments are being accepted. The separate free draw is for one winner and one adult guest on Halloween night, 31 October.</p>
+          <div id="ticket-selected" class="cin-selected-night" role="status" aria-live="polite"><span>Choose your investigation night</span><strong>30 October · £69.99 or 31 October · £79.00</strong><p>Choose either card above to highlight your preferred night. No booking or reservation is created.</p></div><p class="cin-night-footnote">Both nights are planned and subject to final venue and safety arrangements. The free draw offers one winner and one adult guest a pair of places on the night they choose. No payments or competition entries are being accepted.</p>
         </div>
       </section>
 
       
 <section id="experience" class="research"><div class="prn-container research-grid"><div><p class="prn-pub-eyebrow">The PRN approach</p><h2>The difference is what you have time to notice.</h2><p>Christchurch Mansion is a living piece of Ipswich history. PRN is planning carefully managed smaller-group sessions and observational investigation in agreed areas of the building.</p><p>No manufactured scares. No promise of paranormal evidence. Just an unusual opportunity to experience the mansion after hours and ask better questions.</p><p>Final programme, room access and safety arrangements are subject to agreement with the venue.</p></div><img class="research-photo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Cmglee_Ipswich_Christchurch_Mansion_stairs_library.jpg/960px-Cmglee_Ipswich_Christchurch_Mansion_stairs_library.jpg" alt="Genuine historic staircase and library inside Christchurch Mansion"></div></section>
-<section id="tickets" class="ticket-info"><div class="ticket-info-grid"><div class="ticket-copy"><p class="prn-pub-eyebrow">Two investigation nights · 30 &amp; 31 October 2027</p><h2>An experience you won't find in a crowd.</h2><p>Two dates. Small-group investigation plans. An authentic PRN experience built around the atmosphere, history and evidence of Christchurch Mansion.</p><ul><li><span class="check">✓</span>Sunday 31 October: 50 guest places planned, including 48 paid places and one complimentary winner-and-guest pair.</li><li><span class="check">✓</span>Saturday 30 October: price, exact timings and final allocation will be confirmed before booking opens.</li><li><span class="check">✓</span>Both nights are strictly for adults aged 18 or over, subject to venue and safety approval.</li><li><span class="check">✓</span>Individual QR tickets, arrival details and published refund terms will follow once checkout is approved.</li></ul></div><aside class="cin-ticket-launch-card" aria-label="Both night ticket prices"><p class="prn-pub-eyebrow">Admission · Christchurch Mansion</p><h3>Tickets coming soon</h3><p>Two dates. One official PRN booking page when sales open.</p><div class="cin-ticket-pair-line"><span>Saturday 30 October</span><strong>Price TBC</strong></div><div class="cin-ticket-pair-line"><span>Halloween · Sunday 31 October</span><strong>£79.00</strong></div><p>Sunday admission is per paying guest, with no additional booking fee.</p><div class="ticket-status" role="status">Tickets coming soon</div><p>Booking is not open yet. The secure links will appear here once the allocations, venue arrangements and payment checks are finalised. This page does not collect payments, reservations or personal details.</p></aside></div></section>
-<section class="giveaway" id="giveaway"><div class="prn-container giveaway-grid"><div><p class="prn-pub-eyebrow">Christchurch Mansion · Free ticket prize draw</p><h2>Win 2 tickets.<br>Bring someone with you.</h2><p>One winner will receive two complimentary places for the Halloween-night investigation on Sunday 31 October 2027: one for themselves and one adult guest. The draw will open on its separate page after the full rules are approved.</p><p>No purchase necessary. The winner and guest must both be at least 18.</p></div><div class="glass"><p class="prn-pub-eyebrow">Official free draw</p><h3>Entries opening soon</h3><p>Join the excitement around Christchurch Mansion. The competition is not accepting entries yet.</p><a class="btn" href="competition.html">Explore the competition ↗</a></div></div></section>
+<section id="tickets" class="ticket-info"><div class="ticket-info-grid"><div class="ticket-copy"><p class="prn-pub-eyebrow">Two investigation nights · 30 &amp; 31 October 2027</p><h2>An experience you won't find in a crowd.</h2><p>Two dates. Small-group investigation plans. An authentic PRN experience built around the atmosphere, history and evidence of Christchurch Mansion.</p><ul><li><span class="check">✓</span>Sunday 31 October: 50 guest places planned, including 48 paid places and one complimentary winner-and-guest pair.</li><li><span class="check">✓</span>Saturday 30 October: £69.99 per paying guest. Exact timings and final capacity will be confirmed before booking opens.</li><li><span class="check">✓</span>Both nights are strictly for adults aged 18 or over, subject to venue and safety approval.</li><li><span class="check">✓</span>Individual QR tickets, arrival details and published refund terms will follow once checkout is approved.</li></ul></div><aside class="cin-ticket-launch-card" aria-label="Both night ticket prices"><p class="prn-pub-eyebrow">Admission · Christchurch Mansion</p><h3>Tickets coming soon</h3><p>Two dates. One official PRN booking page when sales open.</p><div class="cin-ticket-pair-line"><span>Saturday 30 October</span><strong>£69.99</strong></div><div class="cin-ticket-pair-line"><span>Halloween · Sunday 31 October</span><strong>£79.00</strong></div><p>Sunday admission is per paying guest, with no additional booking fee.</p><div class="ticket-status" role="status">Tickets coming soon</div><p>Booking is not open yet. The secure links will appear here once the allocations, venue arrangements and payment checks are finalised. This page does not collect payments, reservations or personal details.</p></aside></div></section>
+<section class="giveaway" id="giveaway"><div class="prn-container giveaway-grid"><div><p class="prn-pub-eyebrow">Christchurch Mansion · Free ticket prize draw</p><h2>Win 2 tickets.<br>Bring someone with you.</h2><p>One winner receives two free admissions for their chosen night (Saturday 30 or Sunday 31 October 2027): one for themselves and one adult guest. The draw will open on its separate page after the full rules are approved.</p><p>No purchase necessary. The winner and guest must both be at least 18.</p></div><div class="glass"><p class="prn-pub-eyebrow">Official free draw</p><h3>Entries opening soon</h3><p>Join the excitement around Christchurch Mansion. The competition is not accepting entries yet.</p><a class="btn" href="competition.html">Explore the competition ↗</a></div></div></section>
 <section class="research"><div class="prn-container research-grid"><div><p class="prn-pub-eyebrow">Inside the mansion</p><h2>The real history is atmospheric enough.</h2><p>Floorboards, draughts, old fabric and shifting temperatures — ordinary sounds can become remarkable after dark. Good investigation begins with proper historical and environmental context.</p><p>The photographs show real historic spaces; availability of particular rooms is not promised.</p></div><img class="research-photo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Cmglee_Ipswich_Christchurch_Mansion_Great_Hall.jpg/960px-Cmglee_Ipswich_Christchurch_Mansion_Great_Hall.jpg" alt="Authentic photograph of the Great Hall at Christchurch Mansion"></div></section>
-<section class="faq"><div class="prn-container"><p class="prn-pub-eyebrow">Good to know</p><h2>Questions, answered properly.</h2><details><summary>Are tickets on sale yet?</summary><p>No. This is a visual preview of the proposed information pages; the booking system remains closed.</p></details><details><summary>What is the price for Saturday 30 October?</summary><p>It has not been confirmed yet. Halloween Sunday 31 October is currently advertised at £79 per paid guest.</p></details><details><summary>Can children attend?</summary><p>No. Both nights are strictly for adults aged 18 or over. The competition winner and guest must also both be 18 or older.</p></details><details><summary>Can I enter the free ticket draw?</summary><p>Not yet. Once officially opened, one winner will be selected for two complimentary admissions on 31 October 2027.</p></details><details><summary>Is paranormal activity guaranteed?</summary><p>No. PRN does not claim unusual noises or equipment readings demonstrate a paranormal cause. Ordinary explanations and evidence limitations matter.</p></details></div></section>
+<section class="faq"><div class="prn-container"><p class="prn-pub-eyebrow">Good to know</p><h2>Questions, answered properly.</h2><details><summary>Are tickets on sale yet?</summary><p>No. This is a visual preview of the proposed information pages; the booking system remains closed.</p></details><details><summary>What is the price for Saturday 30 October?</summary><p>Saturday 30 October admission is £69.99 per paying guest; Halloween Sunday 31 October is £79.00. Saturday timings are still to be confirmed.</p></details><details><summary>Can children attend?</summary><p>No. Both nights are strictly for adults aged 18 or over. The competition winner and guest must also both be 18 or older.</p></details><details><summary>Can I enter the free ticket draw?</summary><p>Not yet. Once officially opened, one winner will be selected for two complimentary admissions on 31 October 2027.</p></details><details><summary>Is paranormal activity guaranteed?</summary><p>No. PRN does not claim unusual noises or equipment readings demonstrate a paranormal cause. Ordinary explanations and evidence limitations matter.</p></details></div></section>
 </main><footer class="footer"><div class="prn-container"><p><strong>DOCUMENTARY PHOTOGRAPHY.</strong> Exterior: <a href="https://commons.wikimedia.org/wiki/File:Christchurch_Mansion_-_Ipswich.jpg" target="_blank" rel="noopener noreferrer">Sumit Surai, CC BY-SA 4.0</a>. Historic interior photographs: <a href="https://commons.wikimedia.org/wiki/File:Cmglee_Ipswich_Christchurch_Mansion_Great_Hall.jpg" target="_blank" rel="noopener noreferrer">Cmglee, CC BY-SA 3.0</a>. Colour and mist are purely decorative CSS overlays, not claimed phenomena.</p><p>PRN draft preview only — do not enter personal information. No payments, reservations or competition entries can be submitted.</p></div></footer>
-<div class="preview-flag">PRN DESIGN PREVIEW · NOT LIVE</div></body></html>
+<div class="preview-flag">PRN DESIGN PREVIEW · NOT LIVE</div><script>(function(){const buttons=[...document.querySelectorAll('[data-ticket-night]')],days={'2027-10-30':['Saturday 30 October 2027','£69.99'],'2027-10-31':['Sunday 31 October 2027','£79.00']};buttons.forEach(b=>b.addEventListener('click',()=>{const d=days[b.dataset.ticketNight];if(!d)return;buttons.forEach(x=>{const active=x===b;x.setAttribute('aria-pressed',String(active));x.textContent=active?'✓ Your selected night':'Select this night';x.closest('.cin-night-card').dataset.selected=String(active)});document.getElementById('ticket-selected').innerHTML='<span>Your selected date</span><strong>'+d[0]+' · '+d[1]+' per guest</strong><p>This is a preview selection only. No place is reserved and no payment is taken. Ticket sales are not open.</p>'; }));})();</script></body></html>
