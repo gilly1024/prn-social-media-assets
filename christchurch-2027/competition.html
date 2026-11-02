@@ -1,0 +1,520 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<meta name="referrer" content="no-referrer">
+<title>PRN Christchurch Mansion — Free Prize Draw Design Preview</title>
+<meta name="description" content="Design preview only. No competition entry or ticket sales on this page.">
+<style>
+
+/*
+ * CHRISTCHURCH COMPETITION V2 — distinct from checkout, native PRN visual language.
+ * Real photographs only. Background uses fixed viewport imagery, not simulated scenes.
+ * Keep this stylesheet shared by the static Netlify design preview and real Next.js route.
+ */
+.cm-root {
+  --cm-blue: #5F8FC2;
+  --cm-coral: #F25F4C;
+  --cm-stone: #E7E1D6;
+  --cm-ivory: #F7F7F5;
+  --cm-line: rgba(153,190,225,.28);
+  position: relative;
+  isolation: isolate;
+  min-height: 100vh;
+  background: #05080c;
+  color: var(--cm-stone);
+  font-family: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  overflow: clip;
+}
+.cm-root *, .cm-root *::before, .cm-root *::after {box-sizing:border-box}
+.cm-root a {text-decoration:none}
+.cm-root button {font:inherit}
+.cm-root :is(a,button,summary):focus-visible {outline:3px solid #96c7ed;outline-offset:3px}
+.cm-background {position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;background:#07101a}
+.cm-background-image {position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:0;transform:scale(1.045);transition:opacity 1.7s ease-in-out,transform 10s linear;filter:saturate(.75)}
+.cm-background-image.cm-active {opacity:1;transform:scale(1)}
+.cm-background::after {content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(2,5,9,.84) 0%,rgba(2,5,10,.70) 43%,rgba(2,6,13,.48) 75%,rgba(3,6,12,.63) 100%),linear-gradient(180deg,rgba(4,7,13,.29) 0%,rgba(5,8,15,.38) 43%,rgba(2,5,10,.71) 100%);z-index:2}
+.cm-background::before {content:"";position:absolute;inset:0;z-index:3;opacity:.45;background:radial-gradient(circle at 82% 17%,rgba(95,143,194,.22),transparent 42%),radial-gradient(circle at 11% 82%,rgba(242,95,76,.08),transparent 48%);mix-blend-mode:screen}
+.cm-content{position:relative;z-index:1}
+.cm-wrap{width:min(1290px,calc(100% - 64px));margin-inline:auto}
+.cm-topline{display:inline-flex;align-items:center;gap:12px;text-transform:uppercase;letter-spacing:.22em;font-size:11px;font-weight:800;color:#B5D2EF}
+.cm-topline::before{content:"";width:32px;height:2px;background:var(--cm-coral);flex:0 0 auto}
+.cm-hero{min-height:670px;display:flex;align-items:center;padding:84px 0 70px;border-bottom:1px solid rgba(255,255,255,.13)}
+.cm-hero-layout{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:56px;align-items:center}
+.cm-title{max-width:720px;margin:26px 0 0;font-weight:800;color:#fff;letter-spacing:-.068em;line-height:1.015;font-size:clamp(54px,6vw,93px);text-shadow:0 5px 30px rgba(0,0,0,.65)}
+.cm-title em{display:block;font-style:normal;color:#9cc6ed;font-size:clamp(32px,4.2vw,55px);letter-spacing:-.046em;margin-top:17px;line-height:1.09}
+.cm-intro{max-width:620px;margin:24px 0 0;font-size:17px;line-height:1.83;color:#f4f5f4;text-shadow:0 2px 12px #000}
+.cm-event-meta{display:flex;flex-wrap:wrap;gap:9px;margin-top:26px}
+.cm-event-meta span{display:inline-flex;align-items:center;gap:9px;min-height:37px;padding:8px 12px;border-radius:30px;border:1px solid rgba(147,193,232,.34);background:rgba(4,12,22,.72);font-size:12px;font-weight:700;color:#f2f4f5;backdrop-filter:blur(7px)}
+.cm-event-meta svg{width:17px;height:17px;color:#9AC3EA}
+.cm-grow-lead{margin-top:28px;max-width:635px;padding:19px 22px;border-radius:0 10px 10px 0;border:1px solid rgba(95,143,194,.34);border-left:4px solid var(--cm-coral);background:linear-gradient(95deg,rgba(9,21,33,.90),rgba(4,8,12,.65));box-shadow:0 16px 45px rgba(0,0,0,.28);font-size:14px;line-height:1.78;color:#d9e1e8}
+.cm-grow-lead strong{color:white}
+.cm-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:29px}
+.cm-btn{display:inline-flex;min-height:51px;align-items:center;justify-content:center;gap:10px;padding:13px 21px;border-radius:8px;border:1px solid rgba(255,255,255,.26);font-size:14px;font-weight:800;transition:transform .15s,box-shadow .15s,background .15s;cursor:pointer;line-height:1.4}
+.cm-btn:hover{transform:translateY(-1px)}
+.cm-btn-blue{color:#081625;background:linear-gradient(135deg,#9BC7F0,#5F8FC2 62%,#3C6998);border-color:#92c1e3;box-shadow:0 12px 30px rgba(0,0,0,.35),inset 0 1px rgba(255,255,255,.4)}
+.cm-btn-blue:hover{box-shadow:0 13px 36px rgba(95,143,194,.34)}
+.cm-btn-outline{color:white;background:rgba(7,13,22,.74);border-color:rgba(180,210,234,.45)}
+.cm-btn-outline:hover{background:rgba(24,42,63,.88)}
+.cm-btn-disabled,.cm-btn-disabled:hover{color:#b8c4cf;background:rgba(70,81,94,.83);border-color:rgba(196,207,220,.18);cursor:not-allowed;transform:none;box-shadow:none}
+.cm-smallprint{color:#bdc4ca;font-size:12px;line-height:1.65;margin-top:20px;max-width:625px}
+.cm-gallery-side{align-self:center}
+.cm-photo-main{border:1px solid rgba(156,202,236,.47);border-radius:13px;overflow:hidden;box-shadow:0 27px 65px rgba(0,0,0,.57),0 0 30px rgba(94,143,194,.15);background:#111821}
+.cm-photo-main img{width:100%;height:270px;object-fit:cover;object-position:center;display:block}
+.cm-photo-label{padding:11px 14px;background:rgba(6,11,18,.95);font-size:12px;font-weight:650;color:#dce4ed}
+.cm-thumb-set{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:11px}
+.cm-slide-button{position:relative;min-width:0;padding:0;border:1px solid rgba(157,181,203,.48);border-radius:9px;overflow:hidden;background:#09131e;cursor:pointer;color:white;text-align:left;box-shadow:0 8px 22px #0006}
+.cm-slide-button[aria-pressed="true"]{border:2px solid #A8CDF0;box-shadow:0 0 0 2px rgba(95,143,194,.28)}
+.cm-slide-button img{display:block;width:100%;height:93px;object-fit:cover;filter:brightness(.8)}
+.cm-slide-button span{position:absolute;inset:auto 0 0;padding:17px 8px 7px;font-size:11px;font-weight:800;background:linear-gradient(transparent,rgba(2,5,9,.93));color:#fff}
+.cm-photo-credits{margin:13px 0 0;font-size:11px;color:#bac7d2;line-height:1.65}
+.cm-photo-credits a{text-decoration:underline;text-underline-offset:3px}
+.cm-section{padding:75px 0}
+.cm-section-head{text-align:center;max-width:790px;margin:0 auto 35px}
+.cm-section-head h2{color:#fff;font-weight:800;letter-spacing:-.05em;line-height:1.11;font-size:clamp(31px,4vw,53px);margin:18px 0}
+.cm-section-head p{font-size:15px;line-height:1.8;color:#dae1e8}
+.cm-steps-area{background:linear-gradient(180deg,rgba(4,8,13,.35),rgba(4,8,13,.49) 50%,rgba(4,8,13,.34));border-bottom:1px solid rgba(255,255,255,.13)}
+.cm-step-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px}
+.cm-step-card{display:flex;flex-direction:column;min-width:0;min-height:370px;padding:26px;border-radius:15px;background:linear-gradient(152deg,rgba(30,41,55,.92),rgba(7,13,21,.93));border:1px solid rgba(161,196,224,.34);box-shadow:0 20px 55px rgba(0,0,0,.5),inset 0 1px rgba(255,255,255,.13);backdrop-filter:blur(17px)}
+.cm-step-card:hover{border-color:rgba(169,211,244,.58)}
+.cm-step-top{display:flex;align-items:center;justify-content:space-between}
+.cm-num{display:grid;place-items:center;width:48px;height:48px;border-radius:50%;background:rgba(95,143,194,.23);color:#B4D4F1;border:1px solid #719eca;font-weight:850;font-size:20px}
+.cm-num-coral{background:rgba(242,95,76,.14);color:#f9b4a7;border-color:#f25f4c80}
+.cm-step-icon{width:29px;height:29px;color:#a5d2ff}
+.cm-step-card h3{color:white;font-size:25px;letter-spacing:-.04em;line-height:1.12;margin:23px 0 9px;font-weight:800}
+.cm-step-card p{font-size:13px;line-height:1.78;color:#c7d2df;margin:0 0 17px}
+.cm-step-card .cm-step-desc{min-height:75px}
+.cm-social-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:auto}
+.cm-platform{min-width:0;padding:13px 5px 12px;border:1px solid #ffffff2e;background:rgba(3,7,13,.62);color:#fff;text-align:center;border-radius:9px;display:flex;flex-direction:column;align-items:center;gap:9px;transition:transform .14s,border-color .14s;cursor:pointer}
+.cm-platform:hover{transform:translateY(-2px);border-color:#8cbbdf}
+.cm-platform-icon{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;box-shadow:0 5px 15px #0007}
+.cm-platform-icon svg{width:22px;height:22px;fill:white}
+.cm-platform-icon.fb{background:#1877F2}
+.cm-platform-icon.ig{background:radial-gradient(circle at 30% 105%,#feda75 0%,#fa7e1e 32%,#d62976 58%,#962fbf 78%,#4f5bd5 100%)}
+.cm-platform-icon.tt{background:#080a11;border:1px solid #ffffff35}
+.cm-platform-name{font-size:12px;line-height:1.2;font-weight:750}
+.cm-platform-action{font-size:10px;color:#b1cfec}
+.cm-step-share{margin-top:auto}
+.cm-ticket-preview{display:flex;gap:12px;align-items:center;border:1px solid rgba(147,195,234,.31);background:rgba(5,12,21,.75);border-radius:8px;padding:9px;margin-bottom:11px}
+.cm-ticket-preview img{width:84px;height:57px;object-fit:cover;border-radius:5px}
+.cm-ticket-preview b{color:#fff;font-size:12px;display:block}
+.cm-ticket-preview span{font-size:11px;display:block;color:#a9c9e5;margin-top:5px}
+.cm-step-share>.cm-btn{width:100%}
+.cm-share-note{margin:12px 0 0!important;text-align:center;font-size:11px!important;color:#b6c5d2!important}
+.cm-share-options{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;margin-top:11px}
+.cm-mini-share{border:1px solid rgba(153,196,234,.36);background:rgba(15,33,52,.78);color:#ddebfa;border-radius:7px;padding:9px 5px;min-height:37px;font-size:11px;font-weight:750;cursor:pointer}
+.cm-mini-share:hover{background:#263d53}
+.cm-status-lock{display:grid;place-items:center;gap:8px;text-align:center;margin-top:auto;padding:27px 15px;border:1px solid rgba(186,203,219,.18);background:rgba(2,6,10,.55);border-radius:9px;color:#bdcad6}
+.cm-status-lock svg{width:29px;height:29px;color:#b0bcc7}
+.cm-status-lock b{font-size:16px;color:#fff}
+.cm-status-lock span{font-size:12px;line-height:1.6;color:#b9c3cb}
+.cm-status-lock .cm-btn{width:100%;margin-top:9px}
+.cm-contribution{border-left:4px solid #f25f4c;display:flex;gap:17px;align-items:center;padding:23px 27px;margin-top:25px;background:linear-gradient(100deg,rgba(16,32,49,.93),rgba(11,16,23,.80));border-radius:0 10px 10px 0;border-top:1px solid rgba(95,143,194,.2);border-right:1px solid rgba(95,143,194,.2);border-bottom:1px solid rgba(95,143,194,.2)}
+.cm-contribution svg{width:36px;height:36px;color:#a9d1f4;flex:none}
+.cm-contribution h3{margin:0 0 6px;color:#fff;font-size:20px;line-height:1.4}
+.cm-contribution p{margin:0;color:#cbd6e0;font-size:13px;line-height:1.7}
+.cm-venue-section{padding:70px 0 80px;background:rgba(4,8,12,.42);border-bottom:1px solid rgba(255,255,255,.11)}
+.cm-venue-layout{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:42px;align-items:center}
+.cm-venue-layout h2{color:#fff;font-size:clamp(30px,3.2vw,44px);letter-spacing:-.045em;margin:17px 0}
+.cm-venue-layout p{line-height:1.85;color:#d4dee7;font-size:14px}
+.cm-venue-photo-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.cm-venue-photo{margin:0;border:1px solid rgba(145,186,218,.4);border-radius:11px;overflow:hidden;background:#09131e;box-shadow:0 12px 32px #0005}
+.cm-venue-photo img{width:100%;height:200px;display:block;object-fit:cover}
+.cm-venue-photo figcaption{padding:11px 13px;color:#d3e0ee;background:rgba(8,15,22,.96);font-size:12px;font-weight:700}
+.cm-mini-credit{font-size:11px!important;color:#b2c3d2!important;line-height:1.6!important;margin-top:14px}
+.cm-mini-credit a{text-decoration:underline}
+.cm-event-strip{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:11px;margin-top:32px}
+.cm-fact-card{background:rgba(9,17,27,.86);border:1px solid rgba(95,143,194,.36);border-radius:10px;padding:18px}
+.cm-fact-card span{display:block;font-size:11px;color:#9dc7e7;margin-bottom:8px}
+.cm-fact-card b{display:block;font-size:14px;color:white}
+.cm-footer-section{padding:67px 0 80px;background:rgba(3,7,11,.78)}
+.cm-bottom-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
+.cm-bottom-card{border:1px solid rgba(95,143,194,.33);background:rgba(11,18,28,.85);border-radius:11px;padding:25px;box-shadow:0 14px 34px rgba(0,0,0,.36)}
+.cm-bottom-card h3{color:white;font-size:18px;margin:0 0 12px}
+.cm-bottom-card p{color:#c0ceda;font-size:13px;line-height:1.85;margin:0 0 14px}
+.cm-bottom-card a{display:inline-flex;min-height:42px;align-items:center;color:#a7d3f3;font-weight:750;font-size:13px;text-decoration:underline}
+.cm-bottom-card details summary{cursor:pointer;color:#fff;font-size:14px;font-weight:700}
+.cm-bottom-card details p{margin-top:12px}
+.cm-photo-disclaimer{color:#b6bfc7;font-size:11px;line-height:1.8;margin-top:21px}
+.cm-photo-disclaimer a{text-decoration:underline}
+.cm-preview-flag{position:fixed;right:14px;bottom:14px;z-index:50;border-radius:7px;border:1px solid #ffffff48;background:#f25f4c;color:#120c0a;padding:11px 14px;font-size:11px;font-weight:850;box-shadow:0 7px 28px #000a}
+.cm-notice{font-size:12px;color:#cbd6df;line-height:1.8}
+.cm-preview-only{position:relative;color:#dee8f0;font-size:12px}
+.cm-feedback{margin:12px 0 0;min-height:20px;color:#b9dafa;font-size:12px;line-height:1.5}
+@media(max-width:1060px){.cm-hero-layout,.cm-venue-layout{grid-template-columns:1fr}.cm-hero{padding-top:60px}.cm-gallery-side{max-width:750px}.cm-venue-photo-grid{max-width:800px}}
+@media(max-width:800px){.cm-wrap{width:min(720px,calc(100% - 36px))}.cm-step-grid,.cm-bottom-grid{grid-template-columns:1fr}.cm-event-strip{grid-template-columns:repeat(2,minmax(0,1fr))}.cm-step-card{min-height:auto}.cm-step-card .cm-step-desc{min-height:0;margin-bottom:25px}.cm-social-grid{max-width:600px}.cm-share-options{max-width:650px}.cm-hero{min-height:auto}}
+@media(max-width:520px){.cm-title{font-size:clamp(40px,11vw,55px)}.cm-title em{font-size:clamp(29px,8vw,39px)}.cm-event-meta span{font-size:11px}.cm-hero{padding:39px 0 42px}.cm-wrap{width:calc(100% - 30px)}.cm-actions{flex-direction:column}.cm-actions .cm-btn{width:100%}.cm-photo-main img{height:205px}.cm-slide-button img{height:68px}.cm-thumb-set{gap:6px}.cm-step-card{padding:22px}.cm-step-card h3{font-size:23px}.cm-section{padding:48px 0}.cm-event-strip{grid-template-columns:1fr 1fr}.cm-fact-card{padding:13px}.cm-venue-section,.cm-footer-section{padding:46px 0}.cm-venue-photo-grid{gap:7px}.cm-venue-photo img{height:145px}.cm-contribution{padding:17px}.cm-bottom-card{padding:21px}}
+@media(prefers-reduced-motion:reduce){.cm-background-image{transition:none;transform:none!important}.cm-btn,.cm-platform{transition:none}}
+
+/* Halloween is a restraint of warm copper, not invented ghost imagery. */
+.cm-halloween-pill{display:inline-flex;align-items:center;gap:8px;margin-top:19px;padding:8px 13px;border:1px solid rgba(242,95,76,.45);border-radius:999px;background:rgba(81,39,36,.45);color:#F6B7A5;font-size:11px;letter-spacing:.13em;text-transform:uppercase;font-weight:800}
+.cm-halloween-pill .cm-crescent{font-size:17px;line-height:1}
+.cm-photo-credits a,.cm-photo-disclaimer a{color:#AED3F1!important}
+.cm-photo-credits a:hover,.cm-photo-disclaimer a:hover{color:#FFF!important}
+
+</style>
+<style>
+/* Christchurch Mansion competition V3 — premium PRN glass-depth system.
+ * Layered ON TOP of site design and V2; no AI/composited mansion imagery.
+ * Three equal-sized social glyphs and simple one-action-per-platform sharing.
+ */
+.cm-root{--cm-blue:#5f8fc2;--cm-coral:#f25f4c;--cm-stone:#e7e1d6;--cm-fog:#9dbed8;color:var(--cm-stone)}
+.cm-content{isolation:isolate}
+.cm-background{z-index:0}
+.cm-background-image{filter:saturate(.74) contrast(1.12)}
+.cm-background::after{background:linear-gradient(90deg,rgba(2,4,9,.86),rgba(2,7,15,.65) 45%,rgba(2,7,13,.56) 100%),linear-gradient(180deg,rgba(5,7,11,.26),rgba(4,7,12,.42) 48%,rgba(2,5,11,.76) 100%)}
+.cm-background::before{opacity:.68;background:radial-gradient(ellipse at 75% 17%,rgba(226,128,71,.17),transparent 29%),radial-gradient(ellipse at 30% 91%,rgba(106,164,205,.13),transparent 45%)}
+.cm-hero{position:relative;isolation:isolate}
+.cm-hero::before{content:"";pointer-events:none;position:absolute;inset:0;z-index:-1;background:radial-gradient(ellipse at 81% 0%,rgba(180,113,66,.16),transparent 53%),radial-gradient(ellipse at 20% 80%,rgba(80,133,186,.10),transparent 47%)}
+.cm-title{text-shadow:0 5px 20px #000b,0 13px 42px #0008}
+.cm-hero .cm-topline{color:#c6e4fe}
+.cm-halloween-pill{margin:22px 0 0!important;padding:10px 17px!important;display:flex!important;align-items:center;gap:15px!important;border-radius:10px!important;color:#ffd9b5!important;font-size:11px!important;font-weight:850!important;letter-spacing:.16em!important;line-height:1.55!important;background:linear-gradient(145deg,rgba(100,48,29,.91),rgba(20,16,19,.95))!important;border:1px solid rgba(231,152,96,.62)!important;box-shadow:inset 0 2px 1px rgba(255,245,218,.2),inset 0 -4px 8px #0008,0 4px 0 #271717,0 13px 26px #0009,0 0 19px rgba(233,131,76,.15)!important}
+.cm-halloween-pill .cm-crescent{font-size:20px!important;color:#ffc485}
+.cm-title{margin-top:22px}
+.cm-photo-main{border-color:rgba(181,220,247,.6);box-shadow:inset 0 1px 1px #ffffff3b,0 6px 0 #172b43,0 21px 45px #000d,0 0 38px rgba(93,146,201,.21)}
+.cm-slide-button{box-shadow:inset 0 2px rgba(250,252,255,.13),0 3px 0 #162d46,0 12px 20px #000a}
+.cm-slide-button[aria-pressed="true"]{box-shadow:0 0 0 1px #c5e7ff,0 3px 0 #1c4e78,0 0 28px #599bda59}
+.cm-photo-label{font-weight:700}
+.cm-btn{font-family:Inter,system-ui,sans-serif!important;font-size:13px!important;font-weight:800!important;letter-spacing:0}
+.cm-btn-blue{border:1px solid #9cc5e8!important;background:linear-gradient(150deg,#b9dcf8 0%,#83b3dd 32%,#5987b8 68%,#38638e 100%)!important;color:#071624!important;text-shadow:0 1px 0 #fff3;box-shadow:inset 0 2px 0 #ffffff8a,inset 0 -4px 9px rgba(16,36,62,.52),0 3px 0 #203c5c,0 10px 25px #000b,0 0 20px rgba(95,143,194,.24)!important}
+.cm-btn-blue:hover{box-shadow:inset 0 2px 0 #ffffff8a,inset 0 -3px 8px #1c385882,0 3px 0 #203c5c,0 13px 26px #000b,0 0 29px rgba(95,143,194,.36)!important}
+.cm-step-grid{gap:22px}
+.cm-steps-area{background:linear-gradient(180deg,rgba(3,8,14,.46),rgba(5,9,15,.58) 55%,rgba(3,8,14,.64))}
+.cm-section-head h2{font-weight:850;letter-spacing:-.055em;font-size:clamp(38px,4.4vw,58px)}
+.cm-section-head p{color:#e2e9f0;font-size:15px;max-width:660px}
+.cm-step-card{position:relative;isolation:isolate;min-height:490px;padding:29px 25px;border-radius:17px;border:1px solid rgba(169,205,235,.49);background:radial-gradient(ellipse at 76% 0%,rgba(189,214,233,.11),transparent 45%),radial-gradient(ellipse at 17% 100%,rgba(76,131,190,.17),transparent 55%),linear-gradient(165deg,rgba(38,48,59,.94),rgba(17,25,35,.96) 52%,rgba(7,11,17,.98));backdrop-filter:blur(19px) saturate(106%);-webkit-backdrop-filter:blur(19px) saturate(106%);box-shadow:0 4px 0 #182f44,0 23px 32px #000a,0 50px 72px #0008,inset 0 2px rgba(245,252,255,.24),inset 0 -8px 17px #0008;overflow:visible}
+.cm-step-card::before{content:"";position:absolute;inset:2px;pointer-events:none;border:1px solid rgba(241,250,255,.075);border-radius:15px;background:linear-gradient(152deg,rgba(255,255,255,.065),transparent 28%,transparent 75%,rgba(0,0,0,.19))}
+.cm-step-card::after{content:"";position:absolute;inset:25px 18px auto;pointer-events:none;height:60px;z-index:-1;border-radius:50%;filter:blur(28px);background:rgba(93,156,218,.11)}
+.cm-step-card>*{position:relative;z-index:1}
+.cm-step-card[data-step="share"]{border-color:rgba(144,190,231,.62);background:radial-gradient(ellipse at 83% 8%,rgba(106,159,215,.18),transparent 47%),linear-gradient(172deg,rgba(37,48,62,.94),rgba(17,26,39,.97) 59%,rgba(8,12,19,.98))}
+.cm-step-card[data-step="enter"]{border-color:rgba(234,167,137,.39);background:radial-gradient(ellipse at 82% 5%,rgba(230,104,61,.13),transparent 43%),linear-gradient(166deg,rgba(45,42,42,.94),rgba(20,24,31,.97) 62%,rgba(7,10,18,.98))}
+.cm-step-top{min-height:86px;align-items:flex-start}
+.cm-step-badge{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;width:90px;height:82px;border-radius:13px;background:radial-gradient(circle at 29% 11%,#a8d2f835,transparent 42%),linear-gradient(142deg,#355a7e,#233b58 58%,#102339);border:1px solid rgba(154,205,248,.78);box-shadow:inset 0 2px #e0f2ff68,inset 0 -8px 14px #0008,0 4px 0 #142a40,0 12px 25px #000b,0 0 21px #4c94d62a;text-shadow:0 2px 5px #000}
+.cm-step-badge::after{content:"";position:absolute;inset:5px;border:1px solid #c1e0fc27;border-radius:9px;pointer-events:none}
+.cm-step-index-label{font:850 10px/1 Inter,system-ui,sans-serif;letter-spacing:.20em;color:#b8d9f4;margin-bottom:8px}
+.cm-step-index-number{font:850 32px/1 Inter,system-ui,sans-serif;letter-spacing:-.04em;color:#fff}
+.cm-step-card[data-step="enter"] .cm-step-badge{background:radial-gradient(circle at 29% 11%,#ffdfbd3c,transparent 42%),linear-gradient(142deg,#754d3b,#4c2f2b 58%,#2b1919);border-color:#e3a07ab3;box-shadow:inset 0 2px #fff0d26b,inset 0 -8px 14px #0008,0 4px 0 #351e21,0 12px 25px #000b,0 0 17px #e8855430}
+.cm-step-icon{width:65px;height:65px;display:grid;place-items:center;border:1px solid rgba(156,198,236,.42);border-radius:14px;background:linear-gradient(144deg,rgba(66,91,119,.85),rgba(9,22,36,.82));box-shadow:inset 0 2px #ffffff36,inset 0 -5px 10px #0009,0 7px 17px #0007}
+.cm-step-icon svg{width:29px;height:29px;stroke:#c2e1ff;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 2px 4px #000)}
+.cm-step-card[data-step="enter"] .cm-step-icon{border-color:#d98f715e;background:linear-gradient(145deg,rgba(119,74,57,.85),rgba(36,21,22,.85))}
+.cm-step-card h3{font-size:25px!important;letter-spacing:-.037em;font-weight:800;margin:15px 0 12px;color:#fff}
+.cm-step-card p{font-size:13px!important;line-height:1.8!important;color:#d1dbe5!important}
+.cm-step-desc{min-height:78px}
+.cm-social-grid{margin-top:auto;gap:9px}
+.cm-platform{display:flex;flex-direction:column;align-items:center;min-width:0;min-height:162px;padding:16px 5px 13px;border-radius:11px;border:1px solid #9cc3e472;background:radial-gradient(circle at 28% 10%,#9ccaf522,transparent 56%),linear-gradient(168deg,#273c50,#09131e 80%);box-shadow:inset 0 2px #ffffff34,inset 0 -6px 9px #0009,0 4px 0 #10243a,0 12px 18px #000a;transition:border-color .17s,box-shadow .17s}
+.cm-platform:hover{transform:none;border-color:#b9ddfd;box-shadow:inset 0 2px #ffffff4a,inset 0 -6px 9px #0009,0 4px 0 #10243a,0 16px 22px #000a,0 0 17px #5f8fc247}
+.cm-platform-icon{width:56px;height:56px;flex:0 0 56px;margin:0 auto 13px;border-radius:15px;box-shadow:inset 0 2px 1px #ffffff67,inset 0 -6px 9px #0007,0 3px 0 #050a11,0 8px 14px #0009}
+.cm-platform-icon.fb{background:linear-gradient(145deg,#3996ff,#196ddb 60%,#1551a2)}
+.cm-platform-icon.ig{background:linear-gradient(145deg,#ffa96a,#dd3879 37%,#ae2aa9 70%,#5134b4)}
+.cm-platform-icon.tt{background:linear-gradient(145deg,#313842,#06080e 71%);border-color:#69768c}
+.cm-platform-icon svg{width:29px;height:29px;fill:white;filter:drop-shadow(0 3px 3px #0005)}
+.cm-platform-name{display:block;font-family:Inter,system-ui,sans-serif!important;font-size:13px!important;line-height:19px!important;font-weight:850!important;letter-spacing:-.018em!important;color:#fff!important;margin:0;text-align:center;white-space:nowrap}
+.cm-platform-action{display:block;font-family:Inter,system-ui,sans-serif!important;font-size:11px!important;line-height:17px!important;font-weight:750!important;letter-spacing:0;color:#b0d5f8!important;margin:9px 0 0}
+.cm-step-share{margin-top:auto;display:flex;flex-direction:column}
+.cm-ticket-preview{padding:9px;margin-bottom:13px;min-height:94px;border-radius:11px;background:linear-gradient(141deg,rgba(24,43,64,.94),rgba(4,12,21,.96));border-color:rgba(155,207,250,.48);box-shadow:inset 0 2px #ffffff26,inset 0 -5px 8px #0005,0 3px 0 #16293c,0 10px 17px #0009}
+.cm-ticket-preview img{width:92px;height:75px;border-radius:8px}
+.cm-ticket-preview b{font-size:13px!important;line-height:1.45}
+.cm-ticket-preview span{font-size:11px!important;line-height:1.5;color:#bfd8ef}
+.cm-share-grid{margin:2px 0 0}
+.cm-share-grid .cm-platform{min-height:162px}
+.cm-share-description{margin:0 0 11px!important;color:#d5e3ef!important;font-size:12px!important;font-weight:750;line-height:1.6!important}
+.cm-share-note{margin-top:13px!important;font-size:11px!important;color:#b9cbd9!important}
+.cm-status-lock{min-height:263px;display:flex;flex-direction:column;justify-content:center;border-color:rgba(241,177,144,.38);background:radial-gradient(circle at 50% 0%,rgba(244,118,75,.16),transparent 63%),linear-gradient(146deg,rgba(20,28,36,.97),rgba(4,9,16,.97));box-shadow:inset 0 2px #ffe7d52c,inset 0 -7px 12px #0009,0 3px 0 #422922,0 13px 21px #000a}
+.cm-status-lock svg{width:40px;height:40px;color:#f2b497}
+.cm-status-lock b{font-size:17px;color:#fff}
+.cm-status-lock span{font-size:12px;line-height:1.7;color:#dae0e5}
+.cm-status-lock .cm-btn{margin-top:14px;min-height:52px}
+.cm-contribution{margin-top:34px;padding:27px 30px;border-left:5px solid var(--cm-coral);border-top-color:rgba(179,210,238,.48);border-right-color:rgba(179,210,238,.32);background:linear-gradient(114deg,rgba(28,48,65,.95),rgba(8,17,28,.92));box-shadow:inset 0 2px #ffffff22,0 15px 32px #0009}
+.cm-contribution h3{font-size:21px;line-height:1.35;color:#fff}
+.cm-fact-card,.cm-bottom-card{background:linear-gradient(152deg,rgba(31,47,64,.96),rgba(8,14,22,.96));border-color:#9bc7ef40;box-shadow:inset 0 2px #ffffff2a,inset 0 -5px 9px #0007,0 3px 0 #193146,0 13px 26px #0009}
+.cm-venue-photo{box-shadow:inset 0 2px #ffffff2a,0 4px 0 #193146,0 15px 27px #000a}
+.cm-bottom-card a,.cm-photo-credits a,.cm-photo-disclaimer a{color:#b3dcfb!important}
+.cm-bottom-card a:hover,.cm-photo-credits a:hover,.cm-photo-disclaimer a:hover{color:#fff!important}
+.cm-step-card[data-step="share"] .cm-share-grid:has(.cm-platform:focus-visible){outline:none}
+.cm-fog-ribbon{pointer-events:none;position:absolute;inset:auto -15% -15%;height:240px;z-index:0;background:radial-gradient(ellipse at 15% 60%,rgba(153,181,211,.13),transparent 38%),radial-gradient(ellipse at 55% 41%,rgba(178,194,209,.11),transparent 47%),radial-gradient(ellipse at 84% 47%,rgba(136,165,190,.13),transparent 38%);filter:blur(22px);animation:cm-fog-drift 26s ease-in-out infinite alternate;opacity:.77}
+.cm-halloween-eyebrow{color:#F7C1A3!important;font-weight:850;letter-spacing:.19em;text-transform:uppercase}
+.cm-hero-deco{position:absolute;pointer-events:none;right:4%;bottom:5%;color:rgba(253,190,145,.22);font:italic 24px Georgia,serif;letter-spacing:.04em;transform:rotate(-6deg);text-shadow:0 0 32px rgba(242,95,76,.25);z-index:0}
+@keyframes cm-fog-drift{from{transform:translate3d(-2%,0,0)}to{transform:translate3d(2%,-10px,0)}}
+@media(max-width:1180px){.cm-step-grid{gap:14px}.cm-step-card{padding:24px 17px}.cm-platform{padding:13px 3px}.cm-platform-name{font-size:12px!important}.cm-platform-action{font-size:10px!important}}
+@media(max-width:800px){.cm-step-grid{grid-template-columns:1fr}.cm-step-card{min-height:0;padding:25px}.cm-step-desc{min-height:0!important}.cm-social-grid{margin-top:20px}.cm-platform{min-height:144px}.cm-step-share{margin-top:14px}}
+@media(max-width:480px){.cm-step-card{padding:22px 19px}.cm-platform-name{font-size:12px!important}.cm-platform-action{font-size:10px!important}.cm-platform-icon{width:50px;height:50px;flex-basis:50px}.cm-platform{min-height:139px}.cm-step-badge{width:75px;height:73px}.cm-step-index-number{font-size:29px}.cm-hero-deco{display:none}}
+@media(prefers-reduced-motion:reduce){.cm-fog-ribbon{animation:none}}
+
+/* Final density pass — the three cards align without a huge blank centre. */
+.cm-step-card{min-height:435px;padding:25px 23px}
+.cm-step-top{min-height:72px}
+.cm-step-card h3{margin-top:15px!important}
+.cm-step-desc{min-height:0!important;margin-bottom:17px!important}
+.cm-platform,.cm-share-grid .cm-platform{min-height:142px}
+.cm-platform-icon{margin-bottom:5px}
+.cm-step-share{margin-top:9px}
+.cm-ticket-preview{min-height:74px;padding:8px;margin-bottom:11px}
+.cm-ticket-preview img{height:58px}
+.cm-share-description{margin-bottom:8px!important}
+.cm-status-lock{min-height:230px}
+.cm-share-note{margin-top:9px!important}
+.cm-social-grid{margin-top:12px}
+/* Authentic imagery stays behind a photographic treatment; no invented spirits. */
+.cm-step-card[data-step="enter"]::after{background:rgba(221,112,81,.13)}
+@media(max-width:800px){.cm-step-card{min-height:0;padding:24px}.cm-status-lock{min-height:210px}}
+
+</style>
+<style>
+/* Preview shell imitates the actual live Navigation. In Next.js this is inherited from RootLayout. */
+.cm-preview-nav{position:relative;z-index:3;margin:0 auto;max-width:1420px;padding:5px 24px 0}
+.cm-preview-nav-inner{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:22px;padding:7px 24px;border:1px solid rgba(255,255,255,.22);border-radius:13px;background:linear-gradient(155deg,#171b25eF,#070a10f5);backdrop-filter:blur(20px);box-shadow:0 12px 34px #0008}
+.cm-preview-nav-left,.cm-preview-nav-right{display:flex;align-items:center;gap:24px}
+.cm-preview-nav-left img{width:50px;height:50px;object-fit:contain}
+.cm-preview-nav-links{display:flex;gap:26px;font-weight:650;font-size:14px;color:#f2efec}.cm-preview-nav-links a{color:#F3F3F0}.cm-preview-nav-links a:hover{color:#9cc6ed}
+.cm-preview-nav-right a{font-size:13px;border-radius:7px;padding:12px 16px;border:1px solid rgba(255,255,255,.25);color:#d4dae2;white-space:nowrap}
+.cm-preview-nav-right a:last-child{background:linear-gradient(130deg,#a9cbed,#5f8fc2);color:#07111e;font-weight:800}
+@media(max-width:920px){.cm-preview-nav-links{display:none}}
+@media(max-width:500px){.cm-preview-nav{padding:0}.cm-preview-nav-inner{border-radius:0;padding:7px 16px;min-height:62px}.cm-preview-nav-right a:first-child{display:none}.cm-preview-nav-left img{width:42px;height:42px}}
+</style>
+<svg aria-hidden="true" style="width:0;height:0;position:absolute;overflow:hidden">
+  <defs>
+  <symbol id="logo-facebook" viewBox="0 0 24 24"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></symbol>
+  <symbol id="logo-instagram" viewBox="0 0 24 24"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0Zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03Zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162ZM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4Zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439Z"/></symbol>
+  <symbol id="logo-tiktok" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></symbol>
+  </defs>
+</svg>
+<style data-source="src/styles/christchurch-competition-cinematic.css">
+/*
+ * Christchurch Mansion Halloween 2027 — cinematic editorial treatment.
+ * CSS-only ambient decoration over real, attributed venue photographs.
+ * No fabricated apparition, video, motion library or metered service.
+ */
+.cm-root{--cm-autumn:#da9060;--cm-light:#e1edf6;--cm-shadow:#03070d}
+.cm-hero{min-height:780px;position:relative;isolation:isolate;padding-block:105px 100px;background:linear-gradient(110deg,rgba(4,7,12,.46),transparent 70%)}
+.cm-hero-layout{position:relative;z-index:3;gap:clamp(32px,4vw,74px)}
+.cm-cinematic-atmosphere{position:absolute;inset:0;overflow:hidden;z-index:1;pointer-events:none;isolation:isolate}
+.cm-cinematic-beam{position:absolute;inset:-20% -5% 0 35%;background:radial-gradient(ellipse at 67% 28%,rgba(223,144,80,.23),rgba(162,172,202,.065) 29%,transparent 63%);mix-blend-mode:screen;filter:blur(23px);animation:cm-moonbreath 21s ease-in-out infinite alternate}
+.cm-cinematic-haze{position:absolute;left:-16%;width:133%;pointer-events:none;mix-blend-mode:screen;filter:blur(27px)}
+.cm-cinematic-haze--back{bottom:12%;height:37%;opacity:.57;background:radial-gradient(ellipse 40% 39% at 4% 79%,rgba(189,209,229,.19),transparent 86%),radial-gradient(ellipse 43% 42% at 48% 90%,rgba(168,202,224,.20),transparent 88%),radial-gradient(ellipse 36% 42% at 89% 81%,rgba(176,198,222,.18),transparent 87%);animation:cm-veil-drift-back 33s ease-in-out infinite alternate}
+.cm-cinematic-haze--front{bottom:-14%;height:38%;opacity:.58;background:radial-gradient(ellipse 35% 38% at 18% 61%,rgba(186,209,227,.28),transparent 82%),radial-gradient(ellipse 42% 50% at 53% 69%,rgba(151,194,228,.18),transparent 86%),radial-gradient(ellipse 35% 39% at 91% 54%,rgba(204,214,225,.21),transparent 86%);animation:cm-veil-drift-front 45s ease-in-out infinite alternate}
+.cm-cinematic-dust{position:absolute;inset:0;opacity:.34;background-image:radial-gradient(circle,rgba(251,226,188,.65) .7px,transparent 1px),radial-gradient(circle,rgba(192,224,250,.5) .6px,transparent .9px);background-size:97px 103px,151px 127px;background-position:12px 17px,39px 62px;mask-image:linear-gradient(180deg,transparent 4%,black 40%,transparent 95%);animation:cm-embers-float 36s linear infinite}
+.cm-halloween-pill{width:max-content;max-width:100%;white-space:normal}
+.cm-halloween-crescent{display:inline-block;width:19px;height:19px;flex:none;border:1px solid #e6ba85;border-radius:50%;box-shadow:inset 5px 0 0 #d99b6f,0 0 18px rgba(226,156,95,.28);transform:rotate(-25deg)}
+.cm-cinematic-prologue{font-family:Georgia,serif;font-size:clamp(17px,1.75vw,23px);font-style:italic;letter-spacing:.02em;color:#f1cbab;text-shadow:0 2px 18px #000;line-height:1.45;margin:24px 0 -9px}
+.cm-title{max-width:730px;letter-spacing:-.065em;font-size:clamp(52px,5.6vw,85px);text-wrap:balance}
+.cm-title em{font-size:clamp(31px,3.35vw,49px);line-height:1.16;color:#c3def5;text-shadow:0 6px 24px #000;margin-top:21px;text-wrap:balance}
+.cm-intro{max-width:660px;color:#f0f4f7;font-size:clamp(16px,1.22vw,18px);line-height:1.75;margin-top:25px}
+.cm-prize-ribbon{display:flex;align-items:center;gap:15px;width:fit-content;max-width:100%;margin-top:27px;padding:14px 23px 14px 13px;color:#fff;border:1px solid rgba(237,178,123,.52);border-radius:12px;background:linear-gradient(130deg,rgba(84,47,34,.93),rgba(25,19,23,.93));box-shadow:inset 0 1px rgba(255,228,179,.25),0 4px 0 #301c18,0 17px 34px #0009}
+.cm-prize-ribbon-mark{width:56px;height:56px;flex:none;display:grid;place-items:center;border-radius:9px;background:radial-gradient(circle at 30% 20%,#b78257,#533a31 74%);border:1px solid rgba(249,202,157,.48);font:700 30px/1 Georgia,serif;letter-spacing:-.05em;color:#fff1d9;text-shadow:0 2px 9px #0009}
+.cm-prize-ribbon b{display:block;font:850 13px/1.5 Inter,system-ui,sans-serif;letter-spacing:.14em;color:#ffdcbb}
+.cm-prize-ribbon small{display:block;margin-top:3px;color:#efe2d7;font:600 12px/1.5 Inter,system-ui,sans-serif}
+.cm-grow-lead{border-left-color:#de9870;background:linear-gradient(115deg,rgba(19,31,44,.92),rgba(10,17,25,.84));box-shadow:inset 0 1px #ffffff17,0 17px 40px #0008}
+.cm-cinematic-photo{position:relative;overflow:hidden;border-radius:17px;border-color:rgba(229,185,145,.66);transform:perspective(1200px) rotateY(-2.5deg);transform-origin:center;box-shadow:0 5px 0 #2a323b,0 31px 58px #000d,0 0 55px #c2865a2d,inset 0 2px #ffffff4d}
+.cm-cinematic-photo img{height:clamp(300px,29vw,430px);width:100%;object-fit:cover;animation:cm-photo-enter 1.5s ease both}
+.cm-photo-stage-light{position:absolute;inset:0;pointer-events:none;background:linear-gradient(115deg,rgba(15,23,38,.08),transparent 37%,rgba(232,175,113,.08) 62%,transparent 83%),linear-gradient(0deg,rgba(3,7,11,.4),transparent 55%);animation:cm-photo-light 23s ease-in-out infinite alternate}
+.cm-halloween-seal{position:absolute;top:16px;right:16px;width:112px;height:112px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;border-radius:50%;border:1px solid rgba(246,203,161,.79);outline:1px solid rgba(246,203,161,.3);outline-offset:4px;background:radial-gradient(circle at 30% 24%,rgba(93,57,42,.95),rgba(8,13,21,.95) 80%);box-shadow:0 14px 30px #0009,inset 0 1px #ffdfb86c,0 0 22px rgba(234,156,95,.21);color:#f6d5ad;text-align:center;transform:rotate(7deg);animation:cm-seal-glow 16s ease-in-out infinite}
+.cm-halloween-seal span{font-size:8px;line-height:1.4;font-weight:850;letter-spacing:.11em}
+.cm-halloween-seal strong{font-family:Georgia,serif;font-size:43px;line-height:1.05;color:#fff2db;font-weight:700}
+.cm-photo-label{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:14px 16px;font-size:12px}
+.cm-photo-label-aside{font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#9fc5e3}
+.cm-section-head h2{line-height:1.1;text-wrap:balance}
+.cm-section-head h2 em{font-family:Georgia,serif;font-weight:400;font-style:italic;color:#e9b992;letter-spacing:-.024em}
+.cm-step-card{transition:transform .3s ease,border-color .3s ease,box-shadow .3s ease}
+.cm-step-card:hover{transform:translateY(-5px);box-shadow:0 7px 0 #1a344c,0 31px 43px #000b,0 51px 72px #0008,inset 0 2px #fff3}
+.cm-step-badge{box-shadow:inset 0 2px #fff5,inset 0 -7px 13px #0007,0 4px 0 #18304b,0 0 32px #517ca557}
+.cm-step-card[data-step="enter"] .cm-step-badge{box-shadow:inset 0 2px #ffdfa552,inset 0 -6px 12px #0008,0 4px 0 #42251d,0 0 29px #a76b4744}
+.cm-platform:focus-visible,.cm-slide-button:focus-visible{outline:3px solid #c0e4ff;outline-offset:4px}
+.cm-bottom-card{border-color:#9cbedc51}
+@keyframes cm-moonbreath{from{transform:translate3d(-2%,0,0) scale(1);opacity:.5}to{transform:translate3d(3%,1%,0) scale(1.065);opacity:.88}}
+@keyframes cm-veil-drift-back{from{transform:translate3d(-3%,0,0)}to{transform:translate3d(3%,-4%,0)}}
+@keyframes cm-veil-drift-front{from{transform:translate3d(3%,0,0)}to{transform:translate3d(-4%,-2%,0)}}
+@keyframes cm-embers-float{from{background-position:12px 17px,39px 62px}to{background-position:49px -86px,-38px -36px}}
+@keyframes cm-photo-enter{from{opacity:.4;transform:scale(1.035)}to{opacity:1;transform:scale(1)}}
+@keyframes cm-photo-light{from{opacity:.38}to{opacity:.81}}
+@keyframes cm-seal-glow{0%,100%{box-shadow:0 14px 30px #0009,inset 0 1px #ffdfb86c,0 0 18px #e89b5a28}50%{box-shadow:0 14px 30px #0009,inset 0 1px #ffdfb86c,0 0 31px #e89b5a58}}
+@media(max-width:1060px){.cm-hero{padding-block:70px}.cm-cinematic-photo{transform:none}.cm-photo-main img{height:380px}}
+@media(max-width:640px){.cm-hero{padding-block:48px}.cm-cinematic-prologue{margin:20px 0 -6px}.cm-title{font-size:clamp(39px,10vw,58px)}.cm-title em{font-size:clamp(28px,7.2vw,37px)}.cm-prize-ribbon{gap:10px;padding:11px 14px 11px 10px}.cm-prize-ribbon-mark{width:47px;height:49px;font-size:26px}.cm-prize-ribbon b{font-size:11px}.cm-prize-ribbon small{font-size:11px}.cm-cinematic-photo img,.cm-photo-main img{height:265px}.cm-halloween-seal{width:79px;height:79px;top:14px;right:14px}.cm-halloween-seal strong{font-size:30px}.cm-halloween-seal span{font-size:6px}.cm-photo-label-aside{display:none}.cm-cinematic-dust{opacity:.13}.cm-cinematic-haze--back{opacity:.32}.cm-cinematic-haze--front{opacity:.35}.cm-prize-ribbon,.cm-halloween-pill{max-width:100%}}
+@media(prefers-reduced-motion:reduce){.cm-cinematic-beam,.cm-cinematic-haze,.cm-cinematic-dust,.cm-photo-stage-light,.cm-halloween-seal,.cm-cinematic-photo img,.cm-fog-ribbon,.cm-background-image{animation:none!important;transform:none!important;transition:none!important}.cm-step-card,.cm-platform{transition:none!important}.cm-step-card:hover{transform:none}}
+
+</style>
+</head>
+<body>
+<div class="cm-root">
+<div class="cm-background" aria-hidden="true">
+  <img class="cm-background-image cm-active" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Ipswich_Christchurch_Mansion_Cropped.jpg/1280px-Ipswich_Christchurch_Mansion_Cropped.jpg" alt="" data-bg="0">
+  <img class="cm-background-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Cmglee_Ipswich_Christchurch_Mansion_Great_Hall.jpg/960px-Cmglee_Ipswich_Christchurch_Mansion_Great_Hall.jpg" alt="" data-bg="1">
+  <img class="cm-background-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Cmglee_Ipswich_Christchurch_Mansion_stairs_library.jpg/960px-Cmglee_Ipswich_Christchurch_Mansion_stairs_library.jpg" alt="" data-bg="2">
+</div>
+<div class="cm-content">
+<header class="cm-preview-nav"><nav class="cm-preview-nav-inner" aria-label="PRN site navigation">
+  <div class="cm-preview-nav-left"><a href="https://www.paranormalresponsenetwork.org" aria-label="PRN homepage"><img src="https://www.paranormalresponsenetwork.org/brand/PRN_logo_MASTER.png" alt="Official Paranormal Response Network logo"></a>
+  <div class="cm-preview-nav-links"><a href="https://www.paranormalresponsenetwork.org">Explore <span aria-hidden="true">⌄</span></a><a href="https://www.paranormalresponsenetwork.org">Community <span aria-hidden="true">⌄</span></a><a href="https://www.paranormalresponsenetwork.org">Investigate <span aria-hidden="true">⌄</span></a><a href="https://www.paranormalresponsenetwork.org">Learn <span aria-hidden="true">⌄</span></a></div></div>
+  <div class="cm-preview-nav-right"><a href="https://www.paranormalresponsenetwork.org/auth/login">Sign in</a><a href="https://www.paranormalresponsenetwork.org/auth/register">Join PRN free</a></div>
+</nav></header>
+<main>
+<section class="cm-hero" aria-labelledby="competition-title"><div class="cm-fog-ribbon" aria-hidden="true"></div>
+<div class="cm-cinematic-atmosphere" aria-hidden="true"><span class="cm-cinematic-beam"></span><span class="cm-cinematic-haze cm-cinematic-haze--back"></span><span class="cm-cinematic-haze cm-cinematic-haze--front"></span><span class="cm-cinematic-dust"></span></div>
+<div class="cm-wrap cm-hero-layout">
+  <div>
+    <div class="cm-topline">Paranormal Response Network · Official free prize draw</div><div class="cm-halloween-pill"><span class="cm-halloween-crescent" aria-hidden="true"></span> THE MANSION AFTER DARK · HALLOWEEN 2027</div><p class="cm-cinematic-prologue">Behind its doors, history is waiting.</p>
+    <h1 class="cm-title" id="competition-title">Christchurch Mansion.<em>Win 2 tickets for you and a guest.</em></h1>
+    <p class="cm-intro">One winner. One guest. <strong>Two complimentary places</strong> at our planned Halloween-night investigation on Sunday 31 October 2027. Explore a remarkable historic building with PRN's evidence-led approach.</p>
+<div class="cm-prize-ribbon" aria-label="Prize: one winner and one guest, both aged 18 or older"><span class="cm-prize-ribbon-mark" aria-hidden="true">02</span><span><b>TWO PLACES. ONE WINNER.</b><small>Bring a guest · Both 18+ · No purchase necessary</small></span></div>
+    <div class="cm-event-meta">
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 2v6M17 2v6M3 10h18"/></svg>Sunday 31 October 2027</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v6l4 2"/></svg>7pm–2am</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M8 15h8M12 7v5"/></svg>Strictly 18+</span>
+    </div>
+    <div class="cm-grow-lead"><strong>Help more people discover PRN.</strong> Your genuine follows and voluntary shares help independent investigations reach more people. Neither affects free-draw eligibility or your chance of winning.</div>
+    <div class="cm-actions"><a href="#community-steps" class="cm-btn cm-btn-blue">Discover how to enter <span aria-hidden="true">↗</span></a><a href="tickets.html" class="cm-btn cm-btn-outline">Explore both event nights <span aria-hidden="true">↗</span></a></div>
+    <p class="cm-smallprint">This is the free draw, not the ticket checkout. Following and sharing are encouraged but do not affect eligibility or winning chances.</p>
+  </div>
+  <div class="cm-gallery-side" aria-label="Genuine photographs of Christchurch Mansion">
+    <div class="cm-photo-main cm-cinematic-photo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Ipswich_Christchurch_Mansion_Cropped.jpg/1280px-Ipswich_Christchurch_Mansion_Cropped.jpg" id="featured-image" alt="Christchurch Mansion exterior with red-brick frontage and grass lawn"><div class="cm-photo-stage-light" aria-hidden="true"></div><div class="cm-halloween-seal" aria-hidden="true"><span>CHRISTCHURCH</span><strong>31</strong><span>OCTOBER 2027</span></div><div class="cm-photo-label" id="featured-label">01 / 03 &nbsp; Outside the mansion</div></div>
+    <div class="cm-thumb-set" role="group" aria-label="Choose an authentic mansion photograph">
+      <button type="button" class="cm-slide-button" data-slide="0" aria-pressed="true" aria-label="Show Christchurch Mansion exterior"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Ipswich_Christchurch_Mansion_Cropped.jpg/1280px-Ipswich_Christchurch_Mansion_Cropped.jpg" alt=""><span>Exterior</span></button>
+      <button type="button" class="cm-slide-button" data-slide="1" aria-pressed="false" aria-label="Show the Great Hall"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Cmglee_Ipswich_Christchurch_Mansion_Great_Hall.jpg/960px-Cmglee_Ipswich_Christchurch_Mansion_Great_Hall.jpg" alt=""><span>Great Hall</span></button>
+      <button type="button" class="cm-slide-button" data-slide="2" aria-pressed="false" aria-label="Show the staircase and library"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Cmglee_Ipswich_Christchurch_Mansion_stairs_library.jpg/960px-Cmglee_Ipswich_Christchurch_Mansion_stairs_library.jpg" alt=""><span>Staircase</span></button>
+    </div>
+    <p class="cm-photo-credits">Real photographs by <a href="https://commons.wikimedia.org/wiki/File:Ipswich_Christchurch_Mansion_Cropped.jpg" target="_blank" rel="noopener">Velvet</a> and <a href="https://commons.wikimedia.org/wiki/File:Cmglee_Ipswich_Christchurch_Mansion_Great_Hall.jpg" target="_blank" rel="noopener">Cmglee</a>. See full attribution below.</p>
+  </div>
+</div></section>
+<section id="community-steps" class="cm-section cm-steps-area">
+<div class="cm-wrap">
+  <div class="cm-section-head"><div class="cm-topline">A little support makes a difference</div><h2>Follow the story.<br><em>Take your chance to join it.</em></h2><p>Three clear steps, one official entry form. Following and sharing help PRN grow but are not conditions of entering or winning.</p></div>
+  <div class="cm-step-grid">
+    <article class="cm-step-card" data-step="follow">
+      <div class="cm-step-top"><span class="cm-step-badge" aria-label="Step 1"><span class="cm-step-index-label">STEP</span><span class="cm-step-index-number">01</span></span><span class="cm-step-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2m17-15a4 4 0 0 1 0 8m4 7v-2a4 4 0 0 0-3-3.87M12 7a4 4 0 1 1-8 0 4 4 0 0 1 8 0z"/></svg></span></div>
+      <h3>Like &amp; follow PRN</h3><p class="cm-step-desc">Choose the social network you use. Follow us for investigation footage, research and future events.</p>
+      <div class="cm-social-grid" aria-label="Follow PRN social profiles">
+        <a class="cm-platform" href="https://www.facebook.com/paranormalresponsenetwork" target="_blank" rel="noopener" aria-label="Follow PRN on Facebook"><span class="cm-platform-icon fb"><svg viewBox="0 0 24 24" role="img" aria-label="Facebook" focusable="false"><use href="#logo-facebook"></use></svg></span><span class="cm-platform-name">Facebook</span><span class="cm-platform-action">Follow ↗</span></a>
+        <a class="cm-platform" href="https://www.instagram.com/paranormal.response.network/" target="_blank" rel="noopener" aria-label="Follow PRN on Instagram"><span class="cm-platform-icon ig"><svg viewBox="0 0 24 24" role="img" aria-label="Instagram" focusable="false"><use href="#logo-instagram"></use></svg></span><span class="cm-platform-name">Instagram</span><span class="cm-platform-action">Follow ↗</span></a>
+        <a class="cm-platform" href="https://www.tiktok.com/@paranormalresponse" target="_blank" rel="noopener" aria-label="Follow PRN on TikTok"><span class="cm-platform-icon tt"><svg viewBox="0 0 24 24" role="img" aria-label="TikTok" focusable="false"><use href="#logo-tiktok"></use></svg></span><span class="cm-platform-name">TikTok</span><span class="cm-platform-action">Follow ↗</span></a>
+      </div>
+    </article>
+    <article class="cm-step-card" data-step="share"><div class="cm-step-top"><span class="cm-step-badge" aria-label="Step 2"><span class="cm-step-index-label">STEP</span><span class="cm-step-index-number">02</span></span><span class="cm-step-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.8 13.5l6.3 3.8m0-10.6L8.8 10.5"/></svg></span></div>
+      <h3>Share Christchurch</h3><p class="cm-step-desc">Share the actual <strong>ticket information page</strong> with friends who might love to investigate the mansion.</p>
+      <div class="cm-step-share">
+        <div class="cm-ticket-preview" role="note"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Ipswich_Christchurch_Mansion_Cropped.jpg/1280px-Ipswich_Christchurch_Mansion_Cropped.jpg" alt="Authentic Christchurch Mansion exterior"><div><b>This is what you'll share</b><span>Christchurch Mansion · Ticket information page</span></div></div>
+        <p class="cm-share-description">Choose one platform to share the ticket page:</p>
+        <div class="cm-social-grid cm-share-grid" aria-label="Share Christchurch ticket page">
+          <a class="cm-platform" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.paranormalresponsenetwork.org%2Ftickets%2Fchristchurch-mansion-2027" target="_blank" rel="noopener noreferrer" aria-label="Share Christchurch ticket page on Facebook"><span class="cm-platform-icon fb"><svg viewBox="0 0 24 24" role="img" aria-label="Facebook" focusable="false"><use href="#logo-facebook"></use></svg></span><span class="cm-platform-name">Facebook</span><span class="cm-platform-action">Share ↗</span></a>
+          <button class="cm-platform" type="button" data-share="instagram" aria-label="Share Christchurch ticket page using Instagram or the phone share menu"><span class="cm-platform-icon ig"><svg viewBox="0 0 24 24" role="img" aria-label="Instagram" focusable="false"><use href="#logo-instagram"></use></svg></span><span class="cm-platform-name">Instagram</span><span class="cm-platform-action">Share ↗</span></button>
+          <button class="cm-platform" type="button" data-share="tiktok" aria-label="Share Christchurch ticket page using TikTok or the phone share menu"><span class="cm-platform-icon tt"><svg viewBox="0 0 24 24" role="img" aria-label="TikTok" focusable="false"><use href="#logo-tiktok"></use></svg></span><span class="cm-platform-name">TikTok</span><span class="cm-platform-action">Share ↗</span></button>
+        </div>
+        <p class="cm-share-note">Instagram and TikTok use your phone's sharing options where available. You confirm before anything posts.</p>
+        <p class="cm-feedback" id="share-feedback" role="status" aria-live="polite"></p>
+      </div>
+    </article>
+    <article class="cm-step-card" data-step="enter"><div class="cm-step-top"><span class="cm-step-badge" aria-label="Step 3"><span class="cm-step-index-label">STEP</span><span class="cm-step-index-number">03</span></span><span class="cm-step-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="13" rx="2"/><path d="M12 8v13M3 12h18M12 8c-4 0-6-2-5-4s5 0 5 4m0 0c4 0 6-2 5-4s-5 0-5 4z"/></svg></span></div>
+      <h3>Enter the free draw</h3><p class="cm-step-desc">When entries open, complete the official form and verify your email. One randomly drawn winner receives two complimentary admissions: for themselves and an adult guest.</p>
+      <div class="cm-status-lock">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 018 0v3"/></svg>
+        <b>Entries opening soon</b><span>The draw isn't open yet. We'll publish the closing date and full rules before entries begin.</span>
+        <button class="cm-btn cm-btn-disabled" type="button" disabled>Enter draw — not open yet</button>
+      </div>
+    </article>
+  </div>
+  <div class="cm-contribution">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 00-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 00-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 000-7.8z"/></svg>
+    <div><h3>Help us grow PRN so we can hold more events like Christchurch Mansion.</h3><p>Every genuine follow and share brings our independent research to more people. Thank you for supporting us.</p></div>
+  </div>
+</div></section>
+<section class="cm-venue-section" id="about-mansion">
+<div class="cm-wrap"><div class="cm-venue-layout"><div><div class="cm-topline">Inside the mansion</div><h2>The real history is atmospheric enough.</h2><p>Christchurch Mansion is a historic Tudor building in Ipswich, home to period rooms and collections. On Halloween night, PRN plans a carefully managed, small-group investigation with an evidence-led approach.</p><p>These are genuine photographs of the building. They aren't evidence of paranormal activity or a promise of access to a particular room.</p><a class="cm-btn cm-btn-outline" href="https://www.paranormalresponsenetwork.org/tickets/christchurch-mansion-2027" target="_blank" rel="noopener">Explore event details ↗</a></div>
+<div class="cm-venue-photo-grid"><figure class="cm-venue-photo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Cmglee_Ipswich_Christchurch_Mansion_Great_Hall.jpg/960px-Cmglee_Ipswich_Christchurch_Mansion_Great_Hall.jpg" alt="Authentic photograph of the Great Hall at Christchurch Mansion"><figcaption>Great Hall</figcaption></figure><figure class="cm-venue-photo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Cmglee_Ipswich_Christchurch_Mansion_stairs_library.jpg/960px-Cmglee_Ipswich_Christchurch_Mansion_stairs_library.jpg" alt="Authentic photograph of the staircase and library at Christchurch Mansion"><figcaption>Staircase &amp; library</figcaption></figure></div></div>
+<div class="cm-event-strip">
+<div class="cm-fact-card"><span>Date</span><b>Sunday 31 October 2027</b></div><div class="cm-fact-card"><span>Time</span><b>7pm – 2am</b></div><div class="cm-fact-card"><span>Age limit</span><b>Strictly 18+</b></div><div class="cm-fact-card"><span>Prize</span><b>One winner + one 18+ guest</b></div>
+</div>
+</div></section>
+<section id="rules" class="cm-footer-section"><div class="cm-wrap"><div class="cm-bottom-grid"><article class="cm-bottom-card"><h3>This is a free prize draw.</h3><p>This page is NOT the ticket checkout. No payment or purchase is required to enter.</p><a href="https://www.paranormalresponsenetwork.org/tickets/christchurch-mansion-2027" target="_blank" rel="noopener">View paid ticket information ↗</a></article><article class="cm-bottom-card"><h3>Rules and eligibility</h3><p>The winner and their guest must both be 18 or older on Halloween night, 31 October 2027. The closing date, entry procedure and full rules will be published before the draw opens.</p><details><summary>How will it work?</summary><p>When open, one verified entry per eligible person. One winner will receive two complimentary admissions for themselves and an adult guest. Social interactions are voluntary and do not change the chances of winning.</p></details></article><article class="cm-bottom-card"><h3>Entry status</h3><p>The competition is not open. We are not collecting names or email addresses through this preview.</p><span class="cm-btn cm-btn-disabled" aria-disabled="true">Entries opening soon</span></article></div>
+<div class="cm-photo-disclaimer">Authentic photographic credits and licences: <a href="https://commons.wikimedia.org/wiki/File:Ipswich_Christchurch_Mansion_Cropped.jpg" target="_blank" rel="noopener">Mansion exterior — Velvet (CC BY-SA 3.0)</a>; <a href="https://commons.wikimedia.org/wiki/File:Cmglee_Ipswich_Christchurch_Mansion_Great_Hall.jpg" target="_blank" rel="noopener">Great Hall — Cmglee (CC BY-SA 3.0)</a>; <a href="https://commons.wikimedia.org/wiki/File:Cmglee_Ipswich_Christchurch_Mansion_stairs_library.jpg" target="_blank" rel="noopener">Staircase/library — Cmglee (CC BY-SA 3.0)</a>. Images may be cropped responsively. The Halloween colour treatment is a CSS overlay, not a manipulated or generated photograph.</div>
+</div></section>
+</main>
+<footer style="padding:25px 20px;border-top:1px solid #ffffff19;text-align:center;background:rgba(4,6,9,.91);font-size:12px;color:#bcc5cf">Paranormal Response Network · Free prize draw design preview · This preview accepts no entries or payments</footer>
+</div>
+<div class="cm-preview-flag">DESIGN PREVIEW · NOT LIVE</div>
+</div>
+<script>
+/* Source-backed PRN Halloween preview. Real venue photos only. No entry, signup or tracking. */
+(() => {
+  "use strict";
+  const slides = [
+    {path:"https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Ipswich_Christchurch_Mansion_Cropped.jpg/1280px-Ipswich_Christchurch_Mansion_Cropped.jpg",label:"01 / 03  Outside the mansion",alt:"Christchurch Mansion exterior"},
+    {path:"https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Cmglee_Ipswich_Christchurch_Mansion_Great_Hall.jpg/960px-Cmglee_Ipswich_Christchurch_Mansion_Great_Hall.jpg",label:"02 / 03  Inside the Great Hall",alt:"The genuine Great Hall at Christchurch Mansion"},
+    {path:"https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Cmglee_Ipswich_Christchurch_Mansion_stairs_library.jpg/960px-Cmglee_Ipswich_Christchurch_Mansion_stairs_library.jpg",label:"03 / 03  Staircase and library",alt:"The genuine staircase and library at Christchurch Mansion"}
+  ];
+  const backgroundImages=[...document.querySelectorAll(".cm-background-image")];
+  const controls=[...document.querySelectorAll("[data-slide]")];
+  const featured=document.querySelector("#featured-image");
+  const featuredLabel=document.querySelector("#featured-label");
+  const feedback=document.querySelector("#share-feedback");
+  let current=0;
+  let timer=null;
+
+  function setSlide(n) {
+    if(!Number.isInteger(n)||n<0||n>=slides.length)return;
+    current=n;
+    backgroundImages.forEach((item,index)=>item.classList.toggle("cm-active",index===n));
+    controls.forEach((item,index)=>item.setAttribute("aria-pressed",index===n?"true":"false"));
+    if(featured){featured.src=slides[n].path;featured.alt=slides[n].alt}
+    if(featuredLabel)featuredLabel.textContent=slides[n].label;
+  }
+  function resume(){
+    if(timer){clearInterval(timer);timer=null}
+    if(!document.hidden && !window.matchMedia("(prefers-reduced-motion: reduce)").matches){
+      timer=setInterval(()=>setSlide((current+1)%slides.length),9300);
+    }
+  }
+  controls.forEach(button=>{
+    button.addEventListener("click",()=>{
+      setSlide(Number(button.getAttribute("data-slide")));
+      resume();
+    });
+  });
+  document.addEventListener("visibilitychange",resume);
+  setSlide(0);
+  resume();
+
+  const ticketUrl="https://www.paranormalresponsenetwork.org/tickets/christchurch-mansion-2027";
+  const caption="PRN Christchurch Mansion Halloween investigation — Sunday 31 October 2027, 7pm–2am, 18+. Tickets coming soon. Event information:";
+  function announce(text,showLink=false){
+    if(!feedback)return;
+    feedback.textContent=text;
+    if(showLink){
+      const a=document.createElement("a");
+      a.href=ticketUrl;
+      a.textContent=" Open ticket page";
+      a.rel="noopener noreferrer";
+      a.target="_blank";
+      a.style.textDecoration="underline";
+      a.style.marginLeft="6px";
+      feedback.appendChild(a);
+    }
+  }
+  async function shareSelected(platform){
+    const url=new URL(ticketUrl);
+    url.searchParams.set("utm_source",platform);
+    url.searchParams.set("utm_medium","visitor_share");
+    url.searchParams.set("utm_campaign","christchurch_halloween_2027");
+    if(navigator.share){
+      try{
+        await navigator.share({title:"Christchurch Mansion Halloween 2027",text:caption,url:url.toString()});
+        announce("The share menu handed off the event link. Please finish posting in your chosen app; PRN cannot verify a completed post.");
+        return;
+      }catch(err){
+        if(err&&err.name==="AbortError"){
+          announce("Sharing was cancelled. You can try again."); return;
+        }
+      }
+    }
+    try{
+      await navigator.clipboard.writeText(caption+" "+url.toString());
+      announce("Link and caption copied. Open "+platform+" and share where the app supports it.");
+    }catch{
+      announce("Direct sharing isn't available on this device. Copy the event link and paste it into your chosen app.",true);
+    }
+  }
+  document.querySelector("#share-native")?.addEventListener("click",()=>void shareSelected("direct"));
+  document.querySelectorAll("[data-share]").forEach(btn=>btn.addEventListener("click",()=>void shareSelected(btn.getAttribute("data-share")||"direct")));
+  // No code path activates entry, records social handles, or asserts a completed follow.
+})();
+</script>
+</body></html>
