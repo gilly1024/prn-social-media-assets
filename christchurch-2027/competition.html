@@ -334,7 +334,64 @@
 @media(prefers-reduced-motion:reduce){.cm-cinematic-beam,.cm-cinematic-haze,.cm-cinematic-dust,.cm-photo-stage-light,.cm-halloween-seal,.cm-cinematic-photo img,.cm-fog-ribbon,.cm-background-image{animation:none!important;transform:none!important;transition:none!important}.cm-step-card,.cm-platform{transition:none!important}.cm-step-card:hover{transform:none}}
 
 </style>
-</head>
+<style>
+/*
+ * PRN Christchurch Mansion 2027 date choice — competition + tickets.
+ * Real 30/31 October selection is an information-only UI until legal, inventory,
+ * ticketing and competition backends have independent approval.
+ */
+.cc-date-choice { margin:26px 0 23px; padding:22px; border:1px solid rgba(222,174,135,.5); border-radius:18px; background:radial-gradient(ellipse at 88% 0%,rgba(197,122,71,.15),transparent 58%),linear-gradient(155deg,rgba(20,31,43,.97),rgba(9,14,22,.97)); box-shadow:inset 0 2px rgba(255,241,223,.13),0 4px 0 #302825,0 20px 40px #0009; }
+.cc-date-choice h2 { color:#fff; font-size:clamp(20px,2vw,26px); line-height:1.23; letter-spacing:-.045em; margin:7px 0 17px; font-weight:850; }
+.cc-date-kicker { margin:0; font-size:10px; color:#eac1a6; letter-spacing:.17em; text-transform:uppercase; font-weight:850; }
+.cc-date-options { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
+.cc-date-option { appearance:none; display:flex; flex-direction:column; align-items:stretch; text-align:left; min-width:0; padding:14px 16px 13px; background:linear-gradient(155deg,rgba(34,46,61,.94),rgba(10,17,26,.97)); border:1px solid rgba(171,197,220,.5); border-radius:12px; color:#f0f4f7; box-shadow:inset 0 1px #ffffff26,0 4px 0 #172a3b,0 12px 22px #0008; cursor:pointer; transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease; }
+.cc-date-option:hover { transform:translateY(-2px); border-color:#c1ddf1; }
+.cc-date-option[data-selected="true"] { border:2px solid #f0c4a1; padding:13px 15px 12px; background:radial-gradient(circle at 90% 5%,rgba(239,166,104,.22),transparent 46%),linear-gradient(155deg,#344050,#131e2c); box-shadow:inset 0 2px rgba(255,255,255,.18),0 4px 0 #8c5540,0 0 0 2px rgba(225,166,121,.19),0 15px 35px rgba(203,134,88,.18); }
+.cc-date-option-top { display:flex; align-items:center; justify-content:space-between; gap:8px; font-size:11px; letter-spacing:.14em; color:#d6e7f3; font-weight:850; }
+.cc-date-option[data-date="2027-10-31"] .cc-date-option-top { color:#ffd0ad; }
+.cc-date-radio { width:18px; height:18px; border-radius:50%; border:2px solid #adc9de; display:block; flex:none; }
+.cc-date-option[data-selected="true"] .cc-date-radio { border:5px solid #f4c7a1; background:#152130; }
+.cc-date-option-main { display:flex; align-items:baseline; gap:12px; margin:9px 0 11px; }
+.cc-date-option-main strong { font:700 clamp(60px,6.5vw,80px)/.94 Georgia,serif; color:#fff4e5; letter-spacing:-.09em; }
+.cc-date-option-main span { color:#f5e8dc; font-size:13px; line-height:1.25; letter-spacing:.1em; font-weight:850; }
+.cc-date-option-price { display:block; font-size:23px; font-weight:850; letter-spacing:-.055em; line-height:1.25; color:#fff; }
+.cc-date-option-price small { display:block; font-size:10px; letter-spacing:0; font-weight:600; color:#b8c8d6; margin-top:4px; }
+.cc-date-option-action { display:block; margin-top:13px; padding-top:11px; border-top:1px solid #ffffff25; text-align:center; font-size:12px; font-weight:850; letter-spacing:.01em; color:#bad8ee; }
+.cc-date-option[data-selected="true"] .cc-date-option-action { color:#ffdfbc; }
+.cc-date-selection { font-size:13px; line-height:1.65; color:#e5eff6; margin:21px 0 9px; min-height:21px; }
+.cc-date-selection strong { color:#f8c69f; }
+.cc-date-safety { font-size:11px; line-height:1.65; margin:0; color:#b5c3cf; }
+.cin-night-card { appearance:none; cursor:pointer; text-align:left; font:inherit; width:100%; }
+.cin-night-card[data-selected="true"] { border:2px solid #d5e9fa; box-shadow:inset 0 2px #ffffff56,0 6px 0 #3b668c,0 30px 62px #000b,0 0 0 3px #84bce336; }
+.cin-night-card[data-date="2027-10-31"][data-selected="true"] { border-color:#f5c398; box-shadow:inset 0 2px #ffdfc659,0 6px 0 #85533f,0 30px 62px #000b,0 0 0 3px #de9a6e40; }
+.cin-night-card:focus-visible { outline:3px solid #c0e4ff; outline-offset:5px; }
+.cin-night-card-content { width:100%; display:flex; flex-direction:column; align-items:stretch; }
+.cin-night-card-title { font-size:clamp(24px,2.7vw,34px); font-weight:800; line-height:1.18; letter-spacing:-.045em; color:#fff; margin:23px 0 10px; }
+.cin-night-select-cta { display:block; width:100%; margin-top:16px; padding:12px 18px; text-align:center; font-size:13px; font-weight:850; border-radius:10px; border:1px solid #b6d5f171; color:#d0e9fb; background:linear-gradient(145deg,#294b69b9,#153148c9); box-shadow:inset 0 2px #ffffff18,0 4px 0 #122c40; }
+.cin-night-card[data-selected="true"] .cin-night-select-cta { background:linear-gradient(130deg,#d7aa84,#975f47); border-color:#ffddba; color:#140c0c; box-shadow:inset 0 2px #ffffff5e,0 4px 0 #55372c; }
+.cin-selected-night { max-width:900px; margin:34px auto 0; padding:23px 27px; background:radial-gradient(ellipse at 88% 0%,#a2674840,transparent 52%),linear-gradient(130deg,#182d40,#0a141f); border:1px solid #accfe778; border-radius:15px; box-shadow:0 5px 0 #172b3c,0 19px 35px #000a; color:#eaf2f8; }
+.cin-selected-night span { display:block; text-transform:uppercase; letter-spacing:.17em; font-size:10px; font-weight:850; color:#b9d8ec; margin-bottom:8px; }
+.cin-selected-night strong { display:block; font-size:clamp(18px,2.3vw,26px); font-weight:850; line-height:1.3; color:#fff; }
+.cin-selected-night p { color:#bfccd8; font-size:12px; line-height:1.7; margin:8px 0 0; }
+@media(max-width:640px) {
+ .cc-date-choice {padding:16px 13px; margin-top:20px;}
+ .cc-date-options {gap:8px;}
+ .cc-date-option {padding:11px 10px;}
+ .cc-date-option[data-selected="true"] {padding:10px 9px;}
+ .cc-date-option-top {font-size:10px;letter-spacing:.08em;}
+ .cc-date-option-main {gap:8px;}
+ .cc-date-option-main strong {font-size:clamp(51px,12vw,67px);}
+ .cc-date-option-main span {font-size:11px;}
+ .cc-date-option-price {font-size:19px;}
+ .cc-date-option-price small {font-size:9px;}
+ .cc-date-option-action {font-size:11px;}
+ .cin-night-card-title {font-size:27px;}
+ .cin-selected-night {margin-top:25px;padding:19px 17px;}
+}
+@media(max-width:340px) { .cc-date-option-main strong{font-size:46px}.cc-date-option-main span{font-size:10px}.cc-date-option-price{font-size:17px} }
+@media(prefers-reduced-motion:reduce) { .cc-date-option { transition:none!important; transform:none!important; } }
+
+</style></head>
 <body>
 <div class="cm-root">
 <div class="cm-background" aria-hidden="true">
@@ -355,19 +412,22 @@
   <div>
     <div class="cm-topline">Paranormal Response Network · Official free prize draw</div><div class="cm-halloween-pill"><span class="cm-halloween-crescent" aria-hidden="true"></span> THE MANSION AFTER DARK · HALLOWEEN 2027</div><p class="cm-cinematic-prologue">Behind its doors, history is waiting.</p>
     <h1 class="cm-title" id="competition-title">Christchurch Mansion.<em>Win 2 tickets for you and a guest.</em></h1>
-    <p class="cm-intro">One winner. One guest. <strong>Two complimentary places</strong> at our planned Halloween-night investigation on Sunday 31 October 2027. Explore a remarkable historic building with PRN's evidence-led approach.</p>
+    <p class="cm-intro">One winner. One adult guest. <strong>Two complimentary admissions together</strong> for your selected night: Saturday 30 or Halloween Sunday 31 October 2027. Explore a remarkable historic building with PRN's evidence-led approach.</p>
 <div class="cm-prize-ribbon" aria-label="Prize: one winner and one guest, both aged 18 or older"><span class="cm-prize-ribbon-mark" aria-hidden="true">02</span><span><b>TWO PLACES. ONE WINNER.</b><small>Bring a guest · Both 18+ · No purchase necessary</small></span></div>
-    <div class="cm-event-meta">
-      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 2v6M17 2v6M3 10h18"/></svg>Sunday 31 October 2027</span>
-      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v6l4 2"/></svg>7pm–2am</span>
+<section class="cc-date-choice cc-date-choice--competition" aria-label="Choose preferred prize night"><p class="cc-date-kicker">Your night. Your choice.</p><h2>Which night would you choose?</h2><div class="cc-date-options" role="group" aria-label="Choose preferred competition night">
+<button type="button" class="cc-date-option" data-competition-date="2027-10-30" data-date="2027-10-30" data-selected="false" aria-pressed="false" aria-label="Choose Saturday 30 October 2027"><span class="cc-date-option-top"><span>SATURDAY</span><span aria-hidden="true" class="cc-date-radio"></span></span><span class="cc-date-option-main"><strong>30</strong><span>OCT<br>2027</span></span><span class="cc-date-option-price">£69.99 <small>normal admission</small></span><span class="cc-date-option-action">Select this night</span></button>
+<button type="button" class="cc-date-option" data-competition-date="2027-10-31" data-date="2027-10-31" data-selected="false" aria-pressed="false" aria-label="Choose Sunday 31 October 2027"><span class="cc-date-option-top"><span>SUNDAY</span><span aria-hidden="true" class="cc-date-radio"></span></span><span class="cc-date-option-main"><strong>31</strong><span>OCT<br>2027</span></span><span class="cc-date-option-price">£79.00 <small>normal admission</small></span><span class="cc-date-option-action">Select this night</span></button></div><p id="cc-selected-status" class="cc-date-selection" role="status" aria-live="polite">Choose 30 or 31 October to see your preferred prize night.</p><p class="cc-date-safety">The draw is not open. This selection is a preview and is not saved or submitted. Your choice must be recorded in the official form once entries open. No purchase necessary.</p></section>
+<div class="cm-event-meta">
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 2v6M17 2v6M3 10h18"/></svg><b id="cc-night-meta">30 or 31 October 2027</b></span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v6l4 2"/></svg><b id="cc-time-meta">31 Oct 7pm–2am · 30 Oct TBC</b></span>
       <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M8 15h8M12 7v5"/></svg>Strictly 18+</span>
     </div>
     <div class="cm-grow-lead"><strong>Help more people discover PRN.</strong> Your genuine follows and voluntary shares help independent investigations reach more people. Neither affects free-draw eligibility or your chance of winning.</div>
     <div class="cm-actions"><a href="#community-steps" class="cm-btn cm-btn-blue">Discover how to enter <span aria-hidden="true">↗</span></a><a href="tickets.html" class="cm-btn cm-btn-outline">Explore both event nights <span aria-hidden="true">↗</span></a></div>
-    <p class="cm-smallprint">This is the free draw, not the ticket checkout. Following and sharing are encouraged but do not affect eligibility or winning chances.</p>
+    <p class="cm-smallprint">This is the free draw, not ticket checkout. Choosing a night here does not submit an entry. Following and sharing are optional.</p>
   </div>
   <div class="cm-gallery-side" aria-label="Genuine photographs of Christchurch Mansion">
-    <div class="cm-photo-main cm-cinematic-photo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Ipswich_Christchurch_Mansion_Cropped.jpg/1280px-Ipswich_Christchurch_Mansion_Cropped.jpg" id="featured-image" alt="Christchurch Mansion exterior with red-brick frontage and grass lawn"><div class="cm-photo-stage-light" aria-hidden="true"></div><div class="cm-halloween-seal" aria-hidden="true"><span>CHRISTCHURCH</span><strong>31</strong><span>OCTOBER 2027</span></div><div class="cm-photo-label" id="featured-label">01 / 03 &nbsp; Outside the mansion</div></div>
+    <div class="cm-photo-main cm-cinematic-photo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Ipswich_Christchurch_Mansion_Cropped.jpg/1280px-Ipswich_Christchurch_Mansion_Cropped.jpg" id="featured-image" alt="Christchurch Mansion exterior with red-brick frontage and grass lawn"><div class="cm-photo-stage-light" aria-hidden="true"></div><div class="cm-halloween-seal" aria-hidden="true"><span>CHRISTCHURCH</span><strong id="cc-photo-night" style="font-size:30px">30 / 31</strong><span>OCTOBER 2027</span></div><div class="cm-photo-label" id="featured-label">01 / 03 &nbsp; Outside the mansion</div></div>
     <div class="cm-thumb-set" role="group" aria-label="Choose an authentic mansion photograph">
       <button type="button" class="cm-slide-button" data-slide="0" aria-pressed="true" aria-label="Show Christchurch Mansion exterior"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Ipswich_Christchurch_Mansion_Cropped.jpg/1280px-Ipswich_Christchurch_Mansion_Cropped.jpg" alt=""><span>Exterior</span></button>
       <button type="button" class="cm-slide-button" data-slide="1" aria-pressed="false" aria-label="Show the Great Hall"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Cmglee_Ipswich_Christchurch_Mansion_Great_Hall.jpg/960px-Cmglee_Ipswich_Christchurch_Mansion_Great_Hall.jpg" alt=""><span>Great Hall</span></button>
@@ -404,7 +464,7 @@
       </div>
     </article>
     <article class="cm-step-card" data-step="enter"><div class="cm-step-top"><span class="cm-step-badge" aria-label="Step 3"><span class="cm-step-index-label">STEP</span><span class="cm-step-index-number">03</span></span><span class="cm-step-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="13" rx="2"/><path d="M12 8v13M3 12h18M12 8c-4 0-6-2-5-4s5 0 5 4m0 0c4 0 6-2 5-4s-5 0-5 4z"/></svg></span></div>
-      <h3>Enter the free draw</h3><p class="cm-step-desc">When entries open, complete the official form and verify your email. One randomly drawn winner receives two complimentary admissions: for themselves and an adult guest.</p>
+      <h3>Enter the free draw</h3><p class="cm-step-desc">When entries open, choose your preferred night in the official form and verify your email. One winner receives two complimentary admissions together for themselves and an adult guest.</p>
       <div class="cm-status-lock">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 018 0v3"/></svg>
         <b>Entries opening soon</b><span>The draw isn't open yet. We'll publish the closing date and full rules before entries begin.</span>
@@ -421,10 +481,10 @@
 <div class="cm-wrap"><div class="cm-venue-layout"><div><div class="cm-topline">Inside the mansion</div><h2>The real history is atmospheric enough.</h2><p>Christchurch Mansion is a historic Tudor building in Ipswich, home to period rooms and collections. On Halloween night, PRN plans a carefully managed, small-group investigation with an evidence-led approach.</p><p>These are genuine photographs of the building. They aren't evidence of paranormal activity or a promise of access to a particular room.</p><a class="cm-btn cm-btn-outline" href="https://www.paranormalresponsenetwork.org/tickets/christchurch-mansion-2027" target="_blank" rel="noopener">Explore event details ↗</a></div>
 <div class="cm-venue-photo-grid"><figure class="cm-venue-photo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Cmglee_Ipswich_Christchurch_Mansion_Great_Hall.jpg/960px-Cmglee_Ipswich_Christchurch_Mansion_Great_Hall.jpg" alt="Authentic photograph of the Great Hall at Christchurch Mansion"><figcaption>Great Hall</figcaption></figure><figure class="cm-venue-photo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Cmglee_Ipswich_Christchurch_Mansion_stairs_library.jpg/960px-Cmglee_Ipswich_Christchurch_Mansion_stairs_library.jpg" alt="Authentic photograph of the staircase and library at Christchurch Mansion"><figcaption>Staircase &amp; library</figcaption></figure></div></div>
 <div class="cm-event-strip">
-<div class="cm-fact-card"><span>Date</span><b>Sunday 31 October 2027</b></div><div class="cm-fact-card"><span>Time</span><b>7pm – 2am</b></div><div class="cm-fact-card"><span>Age limit</span><b>Strictly 18+</b></div><div class="cm-fact-card"><span>Prize</span><b>One winner + one 18+ guest</b></div>
+<div class="cm-fact-card"><span>Night</span><b id="cc-night-fact">30 or 31 October 2027</b></div><div class="cm-fact-card"><span>Time</span><b id="cc-time-fact">Saturday TBC · Sunday 7pm–2am</b></div><div class="cm-fact-card"><span>Age limit</span><b>Strictly 18+</b></div><div class="cm-fact-card"><span>Prize</span><b>One winner + one 18+ guest</b></div>
 </div>
 </div></section>
-<section id="rules" class="cm-footer-section"><div class="cm-wrap"><div class="cm-bottom-grid"><article class="cm-bottom-card"><h3>This is a free prize draw.</h3><p>This page is NOT the ticket checkout. No payment or purchase is required to enter.</p><a href="https://www.paranormalresponsenetwork.org/tickets/christchurch-mansion-2027" target="_blank" rel="noopener">View paid ticket information ↗</a></article><article class="cm-bottom-card"><h3>Rules and eligibility</h3><p>The winner and their guest must both be 18 or older on Halloween night, 31 October 2027. The closing date, entry procedure and full rules will be published before the draw opens.</p><details><summary>How will it work?</summary><p>When open, one verified entry per eligible person. One winner will receive two complimentary admissions for themselves and an adult guest. Social interactions are voluntary and do not change the chances of winning.</p></details></article><article class="cm-bottom-card"><h3>Entry status</h3><p>The competition is not open. We are not collecting names or email addresses through this preview.</p><span class="cm-btn cm-btn-disabled" aria-disabled="true">Entries opening soon</span></article></div>
+<section id="rules" class="cm-footer-section"><div class="cm-wrap"><div class="cm-bottom-grid"><article class="cm-bottom-card"><h3>This is a free prize draw.</h3><p>This page is NOT the ticket checkout. No payment or purchase is required to enter.</p><a href="https://www.paranormalresponsenetwork.org/tickets/christchurch-mansion-2027" target="_blank" rel="noopener">View paid ticket information ↗</a></article><article class="cm-bottom-card"><h3>Rules and eligibility</h3><p>The winner and their guest must both be 18 or older on their chosen night, 30 or 31 October 2027. The closing date, entry procedure and full rules will be published before the draw opens.</p><details><summary>How will it work?</summary><p>When open, one verified entry per eligible person. One winner receives two admissions for the selected night. Social actions remain optional.</p></details></article><article class="cm-bottom-card"><h3>Entry status</h3><p>The competition is not open. We are not collecting names or email addresses through this preview.</p><span class="cm-btn cm-btn-disabled" aria-disabled="true">Entries opening soon</span></article></div>
 <div class="cm-photo-disclaimer">Authentic photographic credits and licences: <a href="https://commons.wikimedia.org/wiki/File:Ipswich_Christchurch_Mansion_Cropped.jpg" target="_blank" rel="noopener">Mansion exterior — Velvet (CC BY-SA 3.0)</a>; <a href="https://commons.wikimedia.org/wiki/File:Cmglee_Ipswich_Christchurch_Mansion_Great_Hall.jpg" target="_blank" rel="noopener">Great Hall — Cmglee (CC BY-SA 3.0)</a>; <a href="https://commons.wikimedia.org/wiki/File:Cmglee_Ipswich_Christchurch_Mansion_stairs_library.jpg" target="_blank" rel="noopener">Staircase/library — Cmglee (CC BY-SA 3.0)</a>. Images may be cropped responsively. The Halloween colour treatment is a CSS overlay, not a manipulated or generated photograph.</div>
 </div></section>
 </main>
@@ -517,4 +577,4 @@
   // No code path activates entry, records social handles, or asserts a completed follow.
 })();
 </script>
-</body></html>
+<script>(function(){const bs=[...document.querySelectorAll('[data-competition-date]')],days={'2027-10-30':['Saturday 30 October 2027','Saturday time TBC','30'],'2027-10-31':['Sunday 31 October 2027','7pm–2am','31']};bs.forEach(b=>b.addEventListener('click',()=>{const d=days[b.dataset.competitionDate];if(!d)return;bs.forEach(x=>{let a=x===b;x.setAttribute('aria-pressed',String(a));x.dataset.selected=String(a);x.querySelector('.cc-date-option-action').textContent=a?'✓ Selected':'Select this night'});document.getElementById('cc-selected-status').textContent='Preferred prize night: '+d[0]+' — one winner + one adult guest, two free admissions. Preview only; not submitted.';document.getElementById('cc-night-meta').textContent=d[0];document.getElementById('cc-time-meta').textContent=d[1];document.getElementById('cc-night-fact').textContent=d[0];document.getElementById('cc-time-fact').textContent=d[1];let p=document.getElementById('cc-photo-night');p.textContent=d[2];p.style.fontSize='';}));})();</script></body></html>
