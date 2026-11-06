@@ -10,6 +10,8 @@ applies to: ChatGPT, Claude, Claude Code, Cowork, Codex, Postiz, Higgsfield, Cap
 
 # PRN SOCIAL CONTENT ENGINE
 
+> **Actual poster-quality tool:** For a rights-cleared exported JPEG containing a printed event QR code, run [tools/prn_poster_qa.py](tools/prn_poster_qa.py) using [the offline validation contract](tools/PRN_POSTER_QA_RUNTIME.md). It verifies the actual QR destination, JPEG format/resolution and original asset source hashes, but cannot attest the composited PRN logo/venue identity or authorise publication.
+
 > **6 November 2026 creative AI adoption:** For any approved PRN image/GIF-generation or edited-promotion task, read [AI_CREATIVE_METHODS_20261106.md](AI_CREATIVE_METHODS_20261106.md) as a mandatory source/authenticity/brand/QR/QA checklist. This does **not** override genuine case photos, official logo, existing publishing approval or media playback checks; a newsletter model announcement is not a connected tool.
 
 ## 0. PURPOSE
