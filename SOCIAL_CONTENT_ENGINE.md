@@ -10,6 +10,8 @@ applies to: ChatGPT, Claude, Claude Code, Cowork, Codex, Postiz, Higgsfield, Cap
 
 # PRN SOCIAL CONTENT ENGINE
 
+> **6 November 2026 creative AI adoption:** For any approved PRN image/GIF-generation or edited-promotion task, read [AI_CREATIVE_METHODS_20261106.md](AI_CREATIVE_METHODS_20261106.md) as a mandatory source/authenticity/brand/QR/QA checklist. This does **not** override genuine case photos, official logo, existing publishing approval or media playback checks; a newsletter model announcement is not a connected tool.
+
 ## 0. PURPOSE
 
 This file is the operational layer that sits above the PRN brand voice, video style guide and prompt library. It governs **how PRN social content is selected, structured and created** — subject selection, use of PRN source material, hooks, factual grounding, platform routing, and the text/image/video/CTA relationship.
