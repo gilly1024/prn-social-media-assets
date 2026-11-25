@@ -23,6 +23,7 @@ repository.
 | [`BRAND_VOICE.md`](BRAND_VOICE.md) | PRN social brand voice and tone |
 | [`SOCIAL_CONTENT_ENGINE.md`](SOCIAL_CONTENT_ENGINE.md) | How PRN social content is selected, structured and created |
 | [`VIDEO_STYLE_GUIDE.md`](VIDEO_STYLE_GUIDE.md) | Video production style and standards |
+| [`CREATIVE_PRODUCTION.md`](CREATIVE_PRODUCTION.md) | Mandatory creative-production entry point, benchmark standards, agent tool selection and continuous improvement |
 | [`VIDEO_EXPORT_AND_PLAYBACK_LOCK.md`](VIDEO_EXPORT_AND_PLAYBACK_LOCK.md) | Mandatory in-chat MP4 compatibility, playback QA, audio and animated-closeout rules |
 | [`SOCIAL_PROMPT_LIBRARY.md`](SOCIAL_PROMPT_LIBRARY.md) | Reusable prompts, templates and build instructions |
 | [`PUBLISHING_WORKFLOW.md`](PUBLISHING_WORKFLOW.md) | Approval, GitHub asset upload, Postiz ingestion, duplicate checking and publishing |
@@ -44,6 +45,8 @@ repository.
 - **Creating content is not permission to publish it.**
 - **Generating media is not permission to publish it.**
 - **Uploading media to this repository is not permission to publish it.**
+- Before making or editing any PRN visual, animation, advert, soundtrack or video, read
+  [`CREATIVE_PRODUCTION.md`](CREATIVE_PRODUCTION.md) and load the current private production toolkit/skill where accessible.
 - For every PRN social-video task, agents must read and obey
   [`VIDEO_EXPORT_AND_PLAYBACK_LOCK.md`](VIDEO_EXPORT_AND_PLAYBACK_LOCK.md) before delivery.
 - Agents **upload approved assets automatically**. Greg is **not** the media-transfer layer —

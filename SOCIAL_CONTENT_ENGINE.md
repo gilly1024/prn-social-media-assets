@@ -14,6 +14,8 @@ applies to: ChatGPT, Claude, Claude Code, Cowork, Codex, Postiz, Higgsfield, Cap
 
 > **6 November 2026 creative AI adoption:** For any approved PRN image/GIF-generation or edited-promotion task, read [AI_CREATIVE_METHODS_20261106.md](AI_CREATIVE_METHODS_20261106.md) as a mandatory source/authenticity/brand/QR/QA checklist. This does **not** override genuine case photos, official logo, existing publishing approval or media playback checks; a newsletter model announcement is not a connected tool.
 
+> **25 November 2026 local creative production:** Read [CREATIVE_PRODUCTION.md](CREATIVE_PRODUCTION.md) before making imagery, animation, video, adverts or sound. Load the current private production toolkit/skill, inspect the relevant accepted benchmark and choose a verified tool route. The brief, brand, output-control and publishing rules remain in force.
+
 ## 0. PURPOSE
 
 This file is the operational layer that sits above the PRN brand voice, video style guide and prompt library. It governs **how PRN social content is selected, structured and created** — subject selection, use of PRN source material, hooks, factual grounding, platform routing, and the text/image/video/CTA relationship.
@@ -711,6 +713,14 @@ in full and use them in this authority order:
 3. VIDEO_STYLE_GUIDE.md
 4. SOCIAL_PROMPT_LIBRARY.md
 5. PUBLISHING_WORKFLOW.md
+6. CREATIVE_PRODUCTION.md (for all creative asset production)
+
+For creative tasks, load the prn-video-production skill and locate the private
+production toolkit and current local tool inventory through the project instructions.
+Study the relevant accepted benchmark and postmortems; select a verified control
+and export route. Prove a short playable section before expensive full production.
+Record new verified methods and limitations for future agents; do not assume local
+access, software availability or permission to publish or spend.
 
 PRN is a serious, evidence-led subscription research and archive platform run
 by Greg Pickersgill as a sole operator. Kirstie Pickersgill is co-founder and

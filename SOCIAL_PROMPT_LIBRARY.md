@@ -92,6 +92,10 @@ generated imagery, logo and banner. Add only elements that the brief explicitly 
 Treat anything not specified as DO NOT ADD.
 
 Read SOCIAL_CONTENT_ENGINE.md, BRAND_VOICE.md, VIDEO_STYLE_GUIDE.md and this library first.
+For imagery, animation, video, audio or adverts also read CREATIVE_PRODUCTION.md,
+load the private production toolkit/skill, and choose a verified tool route and
+relevant accepted benchmark before building. Preserve editable source and update
+shared production knowledge with verified lessons.
 
 Do the following autonomously:
 

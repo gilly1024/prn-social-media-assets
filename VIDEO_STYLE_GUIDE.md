@@ -37,6 +37,10 @@ for.
 
 ---
 
+### 0.1 Creative production update — 25 November 2026
+
+Read [`CREATIVE_PRODUCTION.md`](CREATIVE_PRODUCTION.md) and the current private `prn-video-production` skill/toolkit before building. The 5–6 second micro-ad recipe remains applicable to that lane; it is not a universal runtime or visual treatment for bespoke product demonstrations, cinematic platform films, or documentary explainers. Follow the active brief and the relevant accepted production benchmark, with feature-by-feature motion, original design, shot-specific pacing and native framing. Sound, narration, titles and closeouts remain controlled by the active brief and existing output/approval rules. A short playable proof is required before expensive full production; a technical encode pass does not establish creative approval.
+
 ## 1. Authority order
 
 This mirrors the order fixed in `BRAND_VOICE.md`. When instructions conflict, follow:
@@ -769,5 +773,7 @@ already folded into §5.3, §9, §15, §16 and §17 above.
   Prompt Approval Template, the PRN Narrator Voices reference, and the durable lessons of both
   2026-07-27 postmortems into one canonical `VIDEO_STYLE_GUIDE.md`. All seven source documents
   are superseded by this file for video-style purposes.
+
+- 2026-11-25 — Added the creative-production entry point and routing to newer app-advert and cinematic platform-film benchmarks; retained the micro-ad lane and existing output/approval controls.
 
 **End of PRN Video Style Guide — canonical.**

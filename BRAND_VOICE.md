@@ -40,6 +40,10 @@ Historical social-media or brand-voice material found anywhere else — includin
 repository. A filename containing `final`, `master`, `clean` or `repaired` is not approval. Only
 Greg's explicit approval changes an asset to approved.
 
+### 1.0 Creative production companion (25 November 2026)
+
+For imagery, animation, video, advertisements and sound, read [`CREATIVE_PRODUCTION.md`](CREATIVE_PRODUCTION.md) before building. It is the required bridge to the current private local production inventory, reusable skills, approved benchmark films and production lessons. The brand guide governs identity and voice; the production companion governs execution. Neither supplies permission to add unspecified elements, upload private material, spend or publish. Use current approved artwork, not a re-created approximation of the logo.
+
 ### 1.1 Historical material is not approval
 
 Old campaign folders, prepared assets, tests, previous concepts, raw inputs and records of earlier
@@ -851,4 +855,5 @@ permission to publish it.
 - [ ] Confirm the colour anchors (§15) still match the live master logo; re-sample if the logo was re-issued.
 - [ ] Confirm every CTA URL still resolves.
 - [ ] Confirm the asset manifest still matches what is actually in the asset folders, and that migration out of `prn-brain` is progressing.
+- [ ] Check that the creative-production companion and private toolkit still point to current tools and accepted production benchmarks; retire superseded methods and record new verified lessons.
 - [ ] Record the review date and any change at the top of this file.
